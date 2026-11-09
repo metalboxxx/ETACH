@@ -1,0 +1,19 @@
+{
+  "meta": {"occasion": "MidTerm", "grade": 8, "term": 1, "test_number": null, "variant": null,
+           "school": null, "year": "2025-2026"},
+  "sections": [
+    {"printed_title": "I", "instructions": "Listen and choose.", "printed_points": "(1.0 pts)",
+     "skill": null, "kind": "listening", "listening_range": [1, 2], "groups": []},
+    {"printed_title": "II", "instructions": "Choose the best answer.", "printed_points": "(1.0 pts)",
+     "skill": "grammar", "kind": "questions",
+     "groups": [{"stimulus": null, "pictures": [], "questions": [
+       {"printed_number": 3, "type": "mcq", "stem": "Blank synthetic three ____.",
+        "options": ["a", "an", "the", "no article"], "cue": null, "page_no": 1},
+       {"printed_number": 4, "type": "true_false", "stem": "Blank synthetic four is true.",
+        "options": null, "cue": null, "page_no": 1}]}]}
+  ],
+  "answers": {"3": null, "4": null},
+  "key": {"3": ["B"], "4": ["T"]},
+  "verified_by": null,
+  "verified_on": null
+}

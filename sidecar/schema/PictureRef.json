@@ -1,0 +1,19 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "file_id": {
+      "title": "File Id",
+      "type": "string"
+    },
+    "page_no": {
+      "title": "Page No",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "file_id",
+    "page_no"
+  ],
+  "title": "PictureRef",
+  "type": "object"
+}

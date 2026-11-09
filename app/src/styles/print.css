@@ -1,0 +1,65 @@
+/*
+ * Print (PRD D4, §10.1): the webview's print dialog prints only the panel's content.
+ * The sidebar, the conversation and the panel chrome (header, toolbar) carry `no-print`.
+ */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  html,
+  body,
+  #root,
+  [data-testid="app-shell"] {
+    height: auto !important;
+    overflow: visible !important;
+    background: #fff !important;
+    color: #000 !important;
+  }
+  /* The workspace (step 22.1.4) prints only its panel: the bar and the photos are no-print. */
+  [data-testid="workspace"],
+  [data-testid="workspace"] > div {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+  /* The panel's paper wrapper (step 22.5.8 (h)) holds the content row one level down. */
+  [data-testid="workspace"] > div > div {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  /* The thread's banner (step 22.3.2: name, student chip, notes, progress) is a direct child too. */
+  [data-testid="workspace"] > .no-print {
+    display: none !important;
+  }
+  [data-testid="artifact-panel"] {
+    width: 100% !important;
+    border: 0 !important;
+    background: #fff !important;
+  }
+  [data-testid="artifact-panel"] > div {
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+  .print-break-inside-avoid {
+    break-inside: avoid;
+  }
+  /* The print view's on-screen sheet (step 22.1.1) prints as the plain page. */
+  .print-page {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+  }
+}
+
+/* The grade report (step 19): the unsure (?) rows are marked on paper. */
+@media print {
+  [data-testid="report-row"][data-mark="?"] {
+    outline: 2px solid #000 !important;
+    font-weight: 700 !important;
+  }
+}

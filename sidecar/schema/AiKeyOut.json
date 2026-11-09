@@ -1,0 +1,48 @@
+{
+  "$defs": {
+    "AiKeyItem": {
+      "additionalProperties": false,
+      "properties": {
+        "question_id": {
+          "title": "Question Id",
+          "type": "string"
+        },
+        "accepted": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Accepted",
+          "type": "array"
+        },
+        "reason_vi": {
+          "title": "Reason Vi",
+          "type": "string"
+        }
+      },
+      "required": [
+        "question_id",
+        "accepted",
+        "reason_vi"
+      ],
+      "title": "AiKeyItem",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Keys for one section.",
+  "properties": {
+    "keys": {
+      "items": {
+        "$ref": "#/$defs/AiKeyItem"
+      },
+      "title": "Keys",
+      "type": "array"
+    }
+  },
+  "required": [
+    "keys"
+  ],
+  "title": "AiKeyOut",
+  "type": "object"
+}

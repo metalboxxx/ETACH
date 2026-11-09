@@ -1,0 +1,3 @@
+# Generated types are compared byte-for-byte (S7: git diff --exit-code app/src/gen).
+src/gen/** text eol=lf
+* text=auto eol=lf

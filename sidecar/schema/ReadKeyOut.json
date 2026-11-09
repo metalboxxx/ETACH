@@ -1,0 +1,39 @@
+{
+  "$defs": {
+    "KeyLabelAnswer": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "answer": {
+          "title": "Answer",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "answer"
+      ],
+      "title": "KeyLabelAnswer",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Key photo reading, in page order: printed label -> answer.",
+  "properties": {
+    "entries": {
+      "items": {
+        "$ref": "#/$defs/KeyLabelAnswer"
+      },
+      "title": "Entries",
+      "type": "array"
+    }
+  },
+  "required": [
+    "entries"
+  ],
+  "title": "ReadKeyOut",
+  "type": "object"
+}

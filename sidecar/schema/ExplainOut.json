@@ -1,0 +1,31 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "reasoning": {
+      "title": "Reasoning",
+      "type": "string"
+    },
+    "text_vi": {
+      "title": "Text Vi",
+      "type": "string"
+    },
+    "error_type": {
+      "enum": [
+        "gap",
+        "careless",
+        "spelling",
+        "misread_question",
+        "unknown"
+      ],
+      "title": "Error Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "reasoning",
+    "text_vi",
+    "error_type"
+  ],
+  "title": "ExplainOut",
+  "type": "object"
+}

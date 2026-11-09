@@ -1,0 +1,19 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "question_vi": {
+      "title": "Question Vi",
+      "type": "string"
+    },
+    "what_answers_mean_vi": {
+      "title": "What Answers Mean Vi",
+      "type": "string"
+    }
+  },
+  "required": [
+    "question_vi",
+    "what_answers_mean_vi"
+  ],
+  "title": "TeacherQuestion",
+  "type": "object"
+}

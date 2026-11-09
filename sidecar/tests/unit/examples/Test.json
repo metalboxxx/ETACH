@@ -1,0 +1,149 @@
+{
+  "id": "T-0042",
+  "meta": {
+    "occasion": "FinalTerm",
+    "grade": 8,
+    "year": "2025-2026",
+    "school": "THCS Mẫu",
+    "created_by_ai": false,
+    "term": 1,
+    "test_number": "1",
+    "variant": null,
+    "test_code": null,
+    "region": null,
+    "source": null,
+    "textbook": "Global Success 8",
+    "units": [
+      "Unit 1",
+      "Unit 2",
+      "Unit 3",
+      "Unit 4",
+      "Unit 5",
+      "Unit 6"
+    ],
+    "duration_minutes": 45,
+    "exam_format": "generic",
+    "omitted_sections": [
+      {
+        "title": "I. Listen and choose the correct answer",
+        "questions": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "points": 1.0,
+        "kind": "listening"
+      }
+    ],
+    "tags": [],
+    "parent_test_id": null,
+    "extra": {
+      "file_name": "Lop8_HK1_De1.jpg"
+    },
+    "edited_fields": []
+  },
+  "content": {
+    "sections": [
+      {
+        "id": "sec-1",
+        "number": 1,
+        "printed_title": "II",
+        "title": "Pronunciation",
+        "instructions": "Choose the word whose underlined part is pronounced differently.",
+        "points": 2.5,
+        "points_source": "printed",
+        "skill": "pronunciation",
+        "graded": true,
+        "groups": [
+          {
+            "id": "grp-1",
+            "stimulus": null,
+            "pictures": [],
+            "questions": [
+              {
+                "id": "q-7f3a",
+                "number": 1,
+                "printed_number": 5,
+                "page_no": 1,
+                "answer_form": "choice",
+                "context": "single",
+                "stem": null,
+                "options": [
+                  {
+                    "label": "A",
+                    "text": "want<u>ed</u>"
+                  },
+                  {
+                    "label": "B",
+                    "text": "play<u>ed</u>"
+                  },
+                  {
+                    "label": "C",
+                    "text": "need<u>ed</u>"
+                  },
+                  {
+                    "label": "D",
+                    "text": "visit<u>ed</u>"
+                  }
+                ],
+                "cue": null,
+                "points": 0.25,
+                "answer_start": null,
+                "old_type": null,
+                "old_options": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sec-2",
+        "number": 3,
+        "printed_title": "IV",
+        "title": "Reading: gap fill",
+        "instructions": "Read the passage and fill in each blank with ONE suitable word.",
+        "points": 1.5,
+        "points_source": "printed",
+        "skill": "reading",
+        "graded": true,
+        "groups": [
+          {
+            "id": "grp-3",
+            "stimulus": "My village is **peaceful**. I have lived here (17) ____ I was born.",
+            "pictures": [
+              {
+                "file_id": "ef56222222222222222222222222222222222222222222222222222222222222",
+                "page_no": 2
+              }
+            ],
+            "questions": [
+              {
+                "id": "q-8e21",
+                "number": 13,
+                "printed_number": 17,
+                "page_no": 2,
+                "answer_form": "word",
+                "context": "paragraph",
+                "stem": null,
+                "options": null,
+                "cue": null,
+                "points": 0.25,
+                "answer_start": null,
+                "old_type": null,
+                "old_options": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "content_schema_version": 1,
+  "fingerprint": "choose the word whose underlined part is pronounced differently wanted played",
+  "points_possible": 9.0,
+  "source_run_id": "01K6BQ3Z9W4M7T2R8N5P0XJHVA",
+  "merged_into": null,
+  "created_at": "2026-09-28T09:21:40+07:00",
+  "updated_at": "2026-09-28T09:21:40+07:00"
+}

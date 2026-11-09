@@ -1,0 +1,43 @@
+{
+  "occasion": "FinalTerm",
+  "grade": 8,
+  "year": "2025-2026",
+  "school": "THCS Mẫu",
+  "created_by_ai": false,
+  "term": 1,
+  "test_number": "1",
+  "variant": null,
+  "test_code": null,
+  "region": null,
+  "source": null,
+  "textbook": "Global Success 8",
+  "units": [
+    "Unit 1",
+    "Unit 2",
+    "Unit 3",
+    "Unit 4",
+    "Unit 5",
+    "Unit 6"
+  ],
+  "duration_minutes": 45,
+  "exam_format": "generic",
+  "omitted_sections": [
+    {
+      "title": "I. Listen and choose the correct answer",
+      "questions": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "points": 1.0,
+      "kind": "listening"
+    }
+  ],
+  "tags": [],
+  "parent_test_id": null,
+  "extra": {
+    "file_name": "Lop8_HK1_De1.jpg"
+  },
+  "edited_fields": []
+}

@@ -1,0 +1,13 @@
+{
+  "id": "01K6BQ5D3E4F5G6H7J8K9M0N1P",
+  "thread_id": "01K6BQ2X5Y6Z7A8B9C0D1E2F3G",
+  "role": "app",
+  "kind": "run_card",
+  "body": {
+    "run_id": "01K6BQ3Z9W4M7T2R8N5P0XJHVA",
+    "test_id": "T-0042",
+    "attempt_id": "A-0103",
+    "unsure": 7
+  },
+  "created_at": "2026-09-28T09:21:40+07:00"
+}

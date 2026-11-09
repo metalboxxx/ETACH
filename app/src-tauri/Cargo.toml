@@ -1,0 +1,31 @@
+[package]
+name = "etach-shell"
+version = "0.6.1"
+description = "ETACH: the Tauri shell (plan step 14)"
+edition = "2021"
+publish = false
+
+[lib]
+name = "etach_shell_lib"
+crate-type = ["rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["devtools"] }  # devtools: only switched on by ETACH_WEBVIEW_DEVTOOLS in release (E2E_SHELL --release)
+tauri-plugin-dialog = "2"
+tauri-plugin-notification = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.59", features = [
+  "Win32_Foundation",
+  "Win32_Security",
+  "Win32_System_JobObjects",
+  "Win32_System_Threading",
+] }
+
+[profile.dev.package."*"]
+opt-level = 1

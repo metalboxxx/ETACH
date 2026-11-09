@@ -1,0 +1,15 @@
+{
+  "pages": [
+    {
+      "original_name": null,
+      "width": 1131,
+      "height": 1600,
+      "rotation": 0,
+      "is_key": false,
+      "has_text_layer": true,
+      "stand_in": "page-01.png"
+    }
+  ],
+  "existing_test_id": null,
+  "supersedes_attempt_id": null
+}

@@ -1,0 +1,145 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "uncertain_answer",
+        "box_inline_conflict",
+        "uncertain_key",
+        "key_unmapped",
+        "possible_duplicate",
+        "picked_test_mismatch",
+        "unknown_student",
+        "unknown_occasion",
+        "points_assumed",
+        "validator_failed",
+        "merge_unaligned",
+        "unreadable_text"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "owner": {
+      "enum": [
+        "extract",
+        "grade"
+      ],
+      "title": "Owner",
+      "type": "string"
+    },
+    "test_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Test Id"
+    },
+    "attempt_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Attempt Id"
+    },
+    "question_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Question Id"
+    },
+    "dedupe_key": {
+      "title": "Dedupe Key",
+      "type": "string"
+    },
+    "proposal": {
+      "additionalProperties": true,
+      "title": "Proposal",
+      "type": "object"
+    },
+    "resolution": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Resolution"
+    },
+    "followup_run_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Followup Run Id"
+    },
+    "status": {
+      "enum": [
+        "open",
+        "accepted",
+        "fixed",
+        "skipped",
+        "obsolete"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "resolved_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Resolved At"
+    }
+  },
+  "required": [
+    "id",
+    "kind",
+    "owner",
+    "test_id",
+    "attempt_id",
+    "question_id",
+    "dedupe_key",
+    "proposal",
+    "resolution",
+    "followup_run_id",
+    "status",
+    "created_at",
+    "resolved_at"
+  ],
+  "title": "ReviewItem",
+  "type": "object"
+}

@@ -1,0 +1,71 @@
+/* Colour tokens (PRD §10.1, v8.12 to v8.15): the teacher's light theme, from old Saigon school buildings.
+   Light only: there is no dark palette and no dark-mode switch. Every colour in app/src comes
+   from this file (print.css keeps its black and white), so a shade change is made here only.
+   tokens.test.ts checks the names, the hues and the WCAG contrast of each pair the app uses.
+
+   Neutrals. The background is nearly white with a trace of blue, the text black with a hint of yellow;
+   cards are white, the other areas a shade darker in the same blue-grey, so they stay distinct:
+     --etach-bg             page background (the thread, the tabs)
+     --etach-surface        cards and inputs (white)
+     --etach-sidebar        the sidebar (a step darker)
+     --etach-panel          the right-hand panel and the workspace bar (a step darker)
+     --etach-hover          hover fill of rows and quiet buttons
+     --etach-border         dividers and card outlines (quiet, decorative)
+     --etach-input-border   outline of inputs, selects, text areas and tabs (>= 3:1 on every surface)
+     --etach-text-muted     secondary text (>= 4.5:1 on every surface)
+
+   Blue, the main colour, with a deep navy hover (v8.15, v8.20):
+     --etach-accent         blue fill of primary buttons and the selected tab (the same blue as below)
+     --etach-accent-hover   the deep navy those fills turn on hover and press (never an opacity
+                          fade: white on a faded blue could drop below 4.5:1)
+     --etach-accent-text    text and icons on either fill (white; black on blue is never used)
+     --etach-accent-strong  the blue as text, icons, links and state borders (>= 4.5:1 on every surface)
+     --etach-focus          keyboard focus outline (>= 3:1 on every surface)
+
+   Meaning, never decoration (beside a word or an icon, so colour alone never carries it):
+     --etach-correct        correct: a fill only, with --etach-text on it (fails as text)
+     --etach-unsure         unsure: a fill only, with --etach-text on it (fails as text and under white)
+     --etach-wrong          wrong, delete and errors: text and icons, or a fill with white text
+     --etach-label-top      the correct and unsure labels written as text: letters fading from the
+     --etach-label-bottom   text colour (top) to deep gold (bottom), the `mark-label` utility in index.css;
+                          the bottom is >= 4.5:1 on the page and >= 3:1 on every surface and tint */
+:root {
+  color-scheme: light;
+  --etach-bg: #f7f7f9;
+  --etach-surface: #ffffff;
+  --etach-sidebar: #ededf2;
+  --etach-panel: #f1f1f5;
+  --etach-text: #0e0e01;
+  --etach-text-muted: #4e5066;
+  --etach-border: #d6d7e0;
+  --etach-input-border: #73758c;
+  --etach-hover: #e5e6ed;
+  /* Sidebar tints (PRD §10.1 v8.21): the blue over the sidebar. --etach-tint (10%) is a hovered
+     sidebar tab or row; --etach-tint-strong (20%) is the open thread, test or student. Text keeps
+     >= 4.5:1 on both. (New thread is a plain row again, v8.23.) */
+  --etach-tint: #dbdbf1;
+  --etach-tint-strong: #c8c9ef;
+  /* The workspace panel as a sheet of paper (PRD §10.1 v8.21): a thin page shadow and a hairline. */
+  --etach-page-shadow: 0 1px 3px rgb(14 14 1 / 0.12), 0 0 0 1px rgb(14 14 1 / 0.06);
+  /* The selected sidebar tab: the page's hairline and shadow on its top and sides only, so it
+     opens into the page below without a line. */
+  --etach-tab-shadow: 0 -1px 2px rgb(14 14 1 / 0.08), 1px 0 0 rgb(14 14 1 / 0.06), -1px 0 0 rgb(14 14 1 / 0.06), 0 -1px 0 rgb(14 14 1 / 0.06);
+  /* The double rule under the workspace header: a thin line and a thinner one just below. */
+  --etach-rule: #4e5066;
+  --etach-accent: #3539e3;
+  --etach-accent-hover: #181a5c;
+  --etach-accent-text: #ffffff;
+  --etach-accent-strong: #3539e3;
+  --etach-focus: #3539e3;
+  --etach-correct: #56db56;
+  --etach-unsure: #e08422;
+  --etach-wrong: #962718;
+  --etach-label-top: #0e0e01;
+  --etach-label-bottom: #776910;
+  /* The ETACH wordmark (PRD §10.1 v8.18, v8.19, the teacher's pick): lime at the E fading to blue
+     across the T (20% lime at its centre), blue A, deep navy from the middle of the C through the
+     H (`wordmark-gradient` in index.css). A name, not a meaning colour. */
+  --etach-wordmark-lime: #a5d921;
+  --etach-wordmark-blue: #3539e3;
+  --etach-wordmark-end: var(--etach-accent-hover); /* the same deep navy (v8.20) */
+}

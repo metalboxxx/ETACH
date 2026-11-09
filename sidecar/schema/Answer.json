@@ -1,0 +1,151 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "attempt_id": {
+      "title": "Attempt Id",
+      "type": "string"
+    },
+    "question_id": {
+      "title": "Question Id",
+      "type": "string"
+    },
+    "printed_number": {
+      "title": "Printed Number",
+      "type": "integer"
+    },
+    "page_no": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Page No"
+    },
+    "value": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Value"
+    },
+    "value_norm": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Value Norm"
+    },
+    "location": {
+      "enum": [
+        "circled_option",
+        "written_in_blank",
+        "answer_box",
+        "margin",
+        "none"
+      ],
+      "title": "Location",
+      "type": "string"
+    },
+    "confidence": {
+      "title": "Confidence",
+      "type": "number"
+    },
+    "low_trust": {
+      "default": false,
+      "title": "Low Trust",
+      "type": "boolean"
+    },
+    "reading_unsure": {
+      "title": "Reading Unsure",
+      "type": "boolean"
+    },
+    "alt_value": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Alt Value"
+    },
+    "alt_question_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Alt Question Id"
+    },
+    "verdict": {
+      "default": "ungraded",
+      "enum": [
+        "correct",
+        "incorrect",
+        "uncertain",
+        "ungraded"
+      ],
+      "title": "Verdict",
+      "type": "string"
+    },
+    "near_miss": {
+      "default": false,
+      "title": "Near Miss",
+      "type": "boolean"
+    },
+    "points_awarded": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Points Awarded"
+    },
+    "teacher_override": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Teacher Override"
+    }
+  },
+  "required": [
+    "attempt_id",
+    "question_id",
+    "printed_number",
+    "page_no",
+    "value",
+    "value_norm",
+    "location",
+    "confidence",
+    "reading_unsure",
+    "alt_value",
+    "alt_question_id",
+    "points_awarded",
+    "teacher_override"
+  ],
+  "title": "Answer",
+  "type": "object"
+}

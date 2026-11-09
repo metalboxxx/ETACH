@@ -1,0 +1,45 @@
+{
+  "$defs": {
+    "TeacherQuestion": {
+      "additionalProperties": false,
+      "properties": {
+        "question_vi": {
+          "title": "Question Vi",
+          "type": "string"
+        },
+        "what_answers_mean_vi": {
+          "title": "What Answers Mean Vi",
+          "type": "string"
+        }
+      },
+      "required": [
+        "question_vi",
+        "what_answers_mean_vi"
+      ],
+      "title": "TeacherQuestion",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "summary_vi": {
+      "title": "Summary Vi",
+      "type": "string"
+    },
+    "teacher_questions": {
+      "items": {
+        "$ref": "#/$defs/TeacherQuestion"
+      },
+      "maxItems": 5,
+      "minItems": 3,
+      "title": "Teacher Questions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "summary_vi",
+    "teacher_questions"
+  ],
+  "title": "SummaryOut",
+  "type": "object"
+}

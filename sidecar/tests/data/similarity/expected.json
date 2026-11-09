@@ -1,0 +1,21 @@
+{
+  "_note": "Written by hand before the code ran (plan Appendix B.2). The bank test is base.txt; question ids are q<printed number> of each file.",
+  "noisy_pair": {"bank": "base.txt", "new": "noisy_pair.txt", "band": [0.85, 1.0], "tier": "looks_like"},
+  "medium_pair": {"bank": "base.txt", "new": "medium_pair.txt", "band": [0.5, 0.85], "tier": "possibly"},
+  "different": {"bank": "base.txt", "new": "different.txt", "band": [0.0, 0.5], "tier": null},
+  "reordered": {
+    "bank": "base.txt",
+    "new": "reordered.txt",
+    "_order": "new section order II, I, V, III, VII, IV, VI of base.txt, renumbered 1-40",
+    "alignment": {
+      "q1": "q3", "q2": "q4",
+      "q3": "q1", "q4": "q2",
+      "q5": "q23", "q6": "q24", "q7": "q25", "q8": "q26", "q9": "q27", "q10": "q28",
+      "q11": "q5", "q12": "q6", "q13": "q7", "q14": "q8", "q15": "q9", "q16": "q10",
+      "q17": "q11", "q18": "q12", "q19": "q13", "q20": "q14", "q21": "q15", "q22": "q16",
+      "q23": "q35", "q24": "q36", "q25": "q37", "q26": "q38", "q27": "q39", "q28": "q40",
+      "q29": "q17", "q30": "q18", "q31": "q19", "q32": "q20", "q33": "q21", "q34": "q22",
+      "q35": "q29", "q36": "q30", "q37": "q31", "q38": "q32", "q39": "q33", "q40": "q34"
+    }
+  }
+}

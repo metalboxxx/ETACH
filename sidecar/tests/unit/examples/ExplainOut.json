@@ -1,0 +1,5 @@
+{
+  "reasoning": "'I was born' is a point in time, so the key 'since' is right; 'for' needs a length of time.",
+  "text_vi": "'I was born' là mốc thời gian nên dùng 'since'. 'for' đi với khoảng thời gian.",
+  "error_type": "gap"
+}

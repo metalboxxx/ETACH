@@ -1,0 +1,75 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "skill_tag": {
+      "title": "Skill Tag",
+      "type": "string"
+    },
+    "wrong": {
+      "title": "Wrong",
+      "type": "integer"
+    },
+    "seen": {
+      "title": "Seen",
+      "type": "integer"
+    },
+    "gap_errors": {
+      "title": "Gap Errors",
+      "type": "integer"
+    },
+    "note_vi": {
+      "title": "Note Vi",
+      "type": "string"
+    },
+    "label": {
+      "anyOf": [
+        {
+          "enum": [
+            "slipped",
+            "consistently_weak",
+            "inconsistent",
+            "this_paper_only"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Label"
+    },
+    "level": {
+      "anyOf": [
+        {
+          "enum": [
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Level"
+    },
+    "held_back": {
+      "default": false,
+      "title": "Held Back",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "skill_tag",
+    "wrong",
+    "seen",
+    "gap_errors",
+    "note_vi"
+  ],
+  "title": "WeakPoint",
+  "type": "object"
+}

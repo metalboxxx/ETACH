@@ -1,0 +1,41 @@
+SECTION SKILL TAXONOMY — Vietnamese school English tests (grades 6–12)
+The non-grammar skills a question can test. Grammar skills are in grammar.txt (GR-*).
+Format: one skill per line, "ID | name | what is tested | base CEFR level". Lines starting with # are comments.
+
+# Pronunciation and stress
+PRON-VOWEL | Pronunciation — underlined sounds | Pick the word whose underlined part is pronounced differently: any underlined sound, vowel or consonant (e.g. ch, th). | A2
+PRON-ED | Pronunciation — -ed endings | Pick the word whose -ed ending is pronounced differently (/t/, /d/, /ɪd/). | A2
+PRON-S | Pronunciation — -s/-es endings | Pick the word whose -s/-es ending is pronounced differently (/s/, /z/, /ɪz/). | A2
+STRESS-2SYL | Stress — two-syllable words | Pick the word whose main stress falls on a different syllable (two-syllable words). | A2
+STRESS-3SYL | Stress — words of three or more syllables | Pick the word whose main stress falls on a different syllable (three or more syllables). | B1
+
+# Vocabulary
+VOC-TOPIC | Vocabulary — topic words | Choose the word that fits the meaning, from the unit topics (school, family, environment, technology …). | A1
+VOC-COLLOC | Vocabulary — collocations and phrasal verbs | Choose the word that goes with another word (make/do, take part in, look after …). | B1
+VOC-SYN-ANT | Vocabulary — synonyms and antonyms | Choose the word or phrase closest or opposite in meaning to the underlined one. | B1
+VOC-COMM | Vocabulary — communication | Choose the best reply or the best opening line in a short everyday exchange. | A2
+VOC-DICT | Vocabulary — dictionary entry | Use a given dictionary entry (meanings, examples, collocations) to complete a sentence with a short phrase. | B1
+
+# Word form
+WF-NOUN | Word form — nouns | Write the correct noun form of the cue word (including plural and person nouns). | A2
+WF-ADJ | Word form — adjectives | Write the correct adjective form of the cue word. | A2
+WF-ADV | Word form — adverbs | Write the correct adverb form of the cue word. | B1
+WF-VERB | Word form — verbs | Write the correct verb formed from the cue word (prefixes and suffixes such as -ize, -en, en-), or put a cue verb into the right inflected form (e.g. invent → invented). | B1
+WF-NEG | Word form — negative prefixes | Add a negative prefix (un-, in-, im-, dis-, ir-, il-) to the cue word. | B1
+
+# Reading
+READ-DETAIL | Reading — specific detail | Find a fact stated in the text (true/false, multiple choice, short answer). | A2
+READ-MAIN | Reading — main idea | Choose the main idea or the best title of the text or a paragraph. | B1
+READ-INFER | Reading — inference | Work out what the text implies but does not state. | B2
+READ-REF | Reading — reference | Find what a pronoun or word in the text refers to. | A2
+READ-WORD | Reading — word in context | Work out the meaning of a word from the text. | B1
+READ-CLOZE | Reading — cloze | Fill the gaps of a passage with the right word. | B1
+
+# Signs and notices
+SIGN | Signs and notices | Choose what a sign, notice or short message means. | A2
+
+# Sentence rewriting and combining
+REWRITE-START | Rewrite — given beginning | Rewrite a sentence so it keeps the same meaning, starting with the given words. | B1
+REWRITE-CUE | Rewrite — given word | Rewrite a sentence so it keeps the same meaning, using the given word. | B1
+REWRITE-COMBINE | Rewrite — combining | Combine two sentences into one with the same meaning. | B1
+REWRITE-ORDER | Rewrite — word order | Put the given words or phrases in order to make a correct sentence. | A2

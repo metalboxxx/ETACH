@@ -1,0 +1,33 @@
+{
+  "pages": [
+    {
+      "original_name": "Lop8-HKI-De1 (3).jpg",
+      "width": 1204,
+      "height": 1600,
+      "rotation": 0,
+      "is_key": false,
+      "has_text_layer": false,
+      "stand_in": "page-01.png"
+    },
+    {
+      "original_name": "Lop8-HKI-De1 (2).jpg",
+      "width": 1204,
+      "height": 1600,
+      "rotation": 0,
+      "is_key": false,
+      "has_text_layer": false,
+      "stand_in": "page-02.png"
+    },
+    {
+      "original_name": "Lop8-HKI-De1 (1).jpg",
+      "width": 1204,
+      "height": 1600,
+      "rotation": 0,
+      "is_key": false,
+      "has_text_layer": false,
+      "stand_in": "page-03.png"
+    }
+  ],
+  "existing_test_id": null,
+  "supersedes_attempt_id": null
+}

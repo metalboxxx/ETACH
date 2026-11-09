@@ -1,0 +1,47 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "test_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Test Id"
+    },
+    "kind": {
+      "enum": [
+        "filled",
+        "blank",
+        "pending"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "test_id",
+    "kind",
+    "created_at"
+  ],
+  "title": "Thread",
+  "type": "object"
+}

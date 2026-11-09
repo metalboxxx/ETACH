@@ -1,0 +1,1560 @@
+Phase 0 live output - Exam Revision Helper (plan step 5)
+Rendered: 2026-09-29T04:32:51+00:00
+Run: started 2026-09-29T04:24:25+00:00, finished 2026-09-29T04:31:58+00:00
+Command: pytest -m live -q -s -rs
+Ollama: 0.34.4 (C:\Users\HOME\AppData\Local\Programs\Ollama\ollama.exe)
+Models folder: C:\Users\HOME\.ollama\models
+Private server env: {"OLLAMA_MAX_LOADED_MODELS": "1", "OLLAMA_NUM_PARALLEL": "1", "OLLAMA_FLASH_ATTENTION": "0", "OLLAMA_KV_CACHE_TYPE": "f16", "OLLAMA_NOPRUNE": "1", "OLLAMA_HOST": "127.0.0.1:16165", "OLLAMA_MODELS": "C:\\Users\\HOME\\.ollama\\models"}
+GPU: NVIDIA GeForce GTX 1660 Ti 6144 MiB, driver 556.12, 0 MiB used before the run
+Other Ollama on 11434 had a model loaded: no
+Cassette recording: yes (D:\Projects\Exam_Revision_Helper\sidecar\tests\cassettes\phase0)
+Platform: Windows-11-10.0.26200-SP0, Python 3.12.14
+
+== Roles ==
+reasoning: qwen3.5:4b (adapter chat, options {"num_ctx": 16384, "temperature": 0, "seed": 42}) pulled: yes
+vision: numind/nuextract3:Q6_K (adapter nuextract, options {"num_ctx": 16384, "temperature": 0, "seed": 42}) pulled: yes
+
+== pytest summary ==
+14 passed, 0 failed, 0 skipped, 0 errors (exit status 0)
+PASSED   tests/live/test_phase0_live.py::test_item1_logprobs[vision-template-text] (24.16 s)
+PASSED   tests/live/test_phase0_live.py::test_item1_logprobs[vision-template-image] (44.39 s)
+PASSED   tests/live/test_phase0_live.py::test_item1_logprobs[vision-template+format-text] (2.41 s)
+PASSED   tests/live/test_phase0_live.py::test_item1_logprobs[vision-template+format-image] (2.55 s)
+PASSED   tests/live/test_phase0_live.py::test_item1_logprobs[reasoning-format-text] (16.01 s)
+PASSED   tests/live/test_phase0_live.py::test_item1_logprobs[reasoning-format-image] (9.0 s)
+PASSED   tests/live/test_phase0_live.py::test_item1_logprobs[reasoning-format-text-think] (17.64 s)
+PASSED   tests/live/test_phase0_live.py::test_item2_nuextract_template_vs_format (56.2 s)
+PASSED   tests/live/test_phase0_live.py::test_item3_mcq_letter_token[vision] (2.42 s)
+PASSED   tests/live/test_phase0_live.py::test_item3_mcq_letter_token[reasoning] (22.16 s)
+PASSED   tests/live/test_phase0_live.py::test_item4_vram_and_speed[vision] (53.21 s)
+PASSED   tests/live/test_phase0_live.py::test_item4_vram_and_speed[reasoning] (22.23 s)
+PASSED   tests/live/test_phase0_live.py::test_item5_flash_attention_q8_kv (60.07 s)
+PASSED   tests/live/test_phase0_live.py::test_item6_swap_time (120.54 s)
+
+== Item 1 - logprobs with format, with an image, with both ==
+case                          model                   format  think  statuses  valid  logprobs  with top  top sizes  covers    missing
+----------------------------  ----------------------  ------  -----  --------  -----  --------  --------  ---------  --------  --------------------------------------
+vision-template-text          numind/nuextract3:Q6_K  no      no     complete  yes    33        33        [5]        response  33 logprob entries for eval_count 34
+vision-template-image         numind/nuextract3:Q6_K  no      no     complete  yes    33        33        [5]        response  33 logprob entries for eval_count 34
+vision-template+format-text   numind/nuextract3:Q6_K  yes     no     complete  yes    33        33        [5]        response  33 logprob entries for eval_count 34
+vision-template+format-image  numind/nuextract3:Q6_K  yes     no     complete  yes    33        33        [5]        response  33 logprob entries for eval_count 34
+reasoning-format-text         qwen3.5:4b              yes     no     complete  yes    44        44        [5]        response  44 logprob entries for eval_count 45
+reasoning-format-image        qwen3.5:4b              yes     no     complete  yes    44        44        [5]        response  44 logprob entries for eval_count 45
+reasoning-format-think        qwen3.5:4b              yes     yes    complete  yes    887       887       [5]        other     887 logprob entries for eval_count 888
+
+== Item 2 - NuExtract3 template alone vs template + format ==
+shape            statuses  valid  parsed                                                                          correct                                                             logprobs  failure
+---------------  --------  -----  ------------------------------------------------------------------------------  ------------------------------------------------------------------  --------  -------
+template         complete  yes    {"student_name": "Lê Văn Bình", "class_name": "7C3", "q1": "B", "q2": "plays"}  {"student_name": true, "class_name": true, "q1": true, "q2": true}  33        -
+template+format  complete  yes    {"student_name": "Lê Văn Bình", "class_name": "7C3", "q1": "B", "q2": "plays"}  {"student_name": true, "class_name": true, "q1": true, "q2": true}  33        -
+
+== Item 3 - the MCQ letter is a single token ==
+case                    model                   q1  tokens  single  A-D probs (1st token)                                 other alts
+----------------------  ----------------------  --  ------  ------  ----------------------------------------------------  -------------
+vision-template-image   numind/nuextract3:Q6_K  B   ["B"]   yes     {"A": 0.0, "B": 0.9999, "C": 0.0, "D": 0.0}           {"b": 0.0}
+reasoning-format-image  qwen3.5:4b              B   ["B"]   yes     {"A": 0.0001, "B": 0.9992, "C": 0.0001, "D": 0.0001}  {"b": 0.0003}
+
+== Item 4 - VRAM and speed per role model (baseline: flash attention 0, KV f16) ==
+role       model                   num_ctx  ctx (ps)  load s  prompt tok/s  eval tok/s  tokens  size MiB  VRAM MiB  GPU share  all on GPU  smi MiB    valid  error
+---------  ----------------------  -------  --------  ------  ------------  ----------  ------  --------  --------  ---------  ----------  ---------  -----  -----
+vision     numind/nuextract3:Q6_K  16384    16384     13.637  27.04         17.39       115     9436      7954      0.843      no          5953/6144  yes    -
+reasoning  qwen3.5:4b              16384    16384     10.547  105.93        50.42       145     7995      7995      1          yes         5953/6144  yes    -
+
+== Item 5 - flash attention 1 + KV cache q8_0 ==
+role       model                   num_ctx  ctx (ps)  load s  prompt tok/s  eval tok/s  tokens  size MiB  VRAM MiB  GPU share  all on GPU  smi MiB    valid  error
+---------  ----------------------  -------  --------  ------  ------------  ----------  ------  --------  --------  ---------  ----------  ---------  -----  -----
+vision     numind/nuextract3:Q6_K  16384    16384     9.357   160.09        22.55       115     4567      3526      0.772      no          4349/6144  yes    -
+reasoning  qwen3.5:4b              16384    16384     5.494   115.1         51.57       144     3189      3189      1          yes         4077/6144  yes    -
+vision: vs baseline {"size_vram_mib": {"baseline": 7954, "fa_q8": 3526, "diff": -4428}, "size_mib": {"baseline": 9436, "fa_q8": 4567, "diff": -4869}, "fully_on_gpu": {"baseline": false, "fa_q8": false}, "eval_tok_per_s": {"baseline": 17.39, "fa_q8": 22.55, "diff": 5.16}, "prompt_tok_per_s": {"baseline": 27.04, "fa_q8": 160.09, "diff": 133.05}, "load_s": {"baseline": 13.637, "fa_q8": 9.357, "diff": -4.28}, "transcript_valid": {"baseline": true, "fa_q8": true}, "same_lines": true}
+vision: answers {"valid": true, "parsed": {"student_name": "Lê Văn Bình", "class_name": "7C3", "q1": "B", "q2": "plays"}, "answers_correct": {"student_name": true, "class_name": true, "q1": true, "q2": true}, "statuses": ["complete"], "logprobs_count": 33}
+vision: server log | time=2026-09-29T11:28:58.723+07:00 level=INFO source=routes.go:2005 msg="server config" env="map[CUDA_VISIBLE_DEVICES: GGML_VK_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: LLAMA_ARG_FIT: LLAMA_ARG_FIT_TARGET: NO_PROXY: OLLAMA_CONTEXT_LE
+vision: server log | time=2026-09-29T11:29:06.850+07:00 level=INFO source=llama_server.go:436 msg="starting llama-server" cmd="C:\\Users\\HOME\\AppData\\Local\\Programs\\Ollama\\lib\\ollama\\llama-server.exe --model C:\\Users\\HOME\\.ollama\\models\\blobs\\sha256-90b24c336baab3aa0fb8c822a96d7b9f44e72b35d8e947345e07fe791
+vision: server log | llama_context: flash_attn            = enabled
+vision: server log | llama_kv_cache:        CPU KV buffer size =    34.00 MiB
+vision: server log | llama_kv_cache:      CUDA0 KV buffer size =   238.00 MiB
+vision: server log | llama_kv_cache: size =  272.00 MiB ( 16384 cells,   8 layers,  1/1 seqs), K (q8_0):  136.00 MiB, V (q8_0):  136.00 MiB
+vision: server log | llama_kv_cache: attn_rot_k = 1, n_embd_head_k_all = 256
+vision: server log | llama_kv_cache: attn_rot_v = 1, n_embd_head_k_all = 256
+vision: server log | cmn  common_init_: KV cache shifting is not supported for this context, disabling KV cache shifting
+vision: server log | warmup: flash attention is enabled
+reasoning: vs baseline {"size_vram_mib": {"baseline": 7995, "fa_q8": 3189, "diff": -4806}, "size_mib": {"baseline": 7995, "fa_q8": 3189, "diff": -4806}, "fully_on_gpu": {"baseline": true, "fa_q8": true}, "eval_tok_per_s": {"baseline": 50.42, "fa_q8": 51.57, "diff": 1.15}, "prompt_tok_per_s": {"baseline": 105.93, "fa_q8": 115.1, "diff": 9.17}, "load_s": {"baseline": 10.547, "fa_q8": 5.494, "diff": -5.05}, "transcript_valid": {"baseline": true, "fa_q8": true}, "same_lines": false}
+reasoning: answers {"valid": true, "parsed": {"student_name": "Lê Văn Bình", "class_name": "7C3", "q1": "B", "q2": "plays"}, "answers_correct": {"student_name": true, "class_name": true, "q1": true, "q2": true}, "statuses": ["complete"], "logprobs_count": 44}
+reasoning: server log | cmn  common_init_: KV cache shifting is not supported for this context, disabling KV cache shifting
+reasoning: server log | warmup: flash attention is enabled
+reasoning: server log | time=2026-09-29T11:29:35.779+07:00 level=INFO source=llama_server.go:436 msg="starting llama-server" cmd="C:\\Users\\HOME\\AppData\\Local\\Programs\\Ollama\\lib\\ollama\\llama-server.exe --model C:\\Users\\HOME\\.ollama\\models\\blobs\\sha256-81fb60c7daa80fc1123380b98970b320ae233409f0f71a72ed7b9b0d6
+reasoning: server log | llama_context: flash_attn            = enabled
+reasoning: server log | llama_kv_cache:      CUDA0 KV buffer size =   272.00 MiB
+reasoning: server log | llama_kv_cache: size =  272.00 MiB ( 16384 cells,   8 layers,  1/1 seqs), K (q8_0):  136.00 MiB, V (q8_0):  136.00 MiB
+reasoning: server log | llama_kv_cache: attn_rot_k = 1, n_embd_head_k_all = 256
+reasoning: server log | llama_kv_cache: attn_rot_v = 1, n_embd_head_k_all = 256
+reasoning: server log | cmn  common_init_: KV cache shifting is not supported for this context, disabling KV cache shifting
+reasoning: server log | warmup: flash attention is enabled
+
+== Item 6 - swap time, OLLAMA_MAX_LOADED_MODELS=1 ==
+#  role       model                   load s  wall s  valid  loaded after
+-  ---------  ----------------------  ------  ------  -----  --------------------------
+1  vision     numind/nuextract3:Q6_K  11.719  48.047  yes    ["numind/nuextract3:Q6_K"]
+2  reasoning  qwen3.5:4b              14.697  16.765  yes    ["qwen3.5:4b"]
+3  vision     numind/nuextract3:Q6_K  18.069  53.797  yes    ["numind/nuextract3:Q6_K"]
+
+== Records (JSON, as the tests wrote them) ==
+[
+ {
+  "item": 1,
+  "case": "vision-template-text",
+  "at": "2026-09-29T04:24:49+00:00",
+  "role": "vision",
+  "shape": "template",
+  "task": "phase0_logprobs_vision_template_text",
+  "model": "numind/nuextract3:Q6_K",
+  "input": "text",
+  "request_has_format": false,
+  "think": false,
+  "statuses": [
+   "complete"
+  ],
+  "valid": true,
+  "failure": null,
+  "parsed": {
+   "student_name": "Lê Văn Bình",
+   "class_name": "7C3",
+   "q1": "B",
+   "q2": "plays"
+  },
+  "answers_correct": {
+   "student_name": true,
+   "class_name": true,
+   "q1": true,
+   "q2": true
+  },
+  "response_text": "{\"student_name\": \"Lê Văn Bình\", \"class_name\": \"7C3\", \"q1\": \"B\", \"q2\": \"plays\"}",
+  "thinking_chars": 0,
+  "logprob_text_chars": 78,
+  "logprobs_cover": "response",
+  "logprobs": {
+   "count": 33,
+   "with_top_logprobs": 33,
+   "top_logprobs_sizes": [
+    5
+   ],
+   "eval_count": 34,
+   "sample": [
+    {
+     "token": "{\"",
+     "logprob": -0.0003722406690940261,
+     "top": [
+      "{\"",
+      "{",
+      "{}",
+      "\"{",
+      "{'"
+     ]
+    },
+    {
+     "token": "student",
+     "logprob": -3.695494797284482e-06,
+     "top": [
+      "student",
+      " student",
+      ".student",
+      "Student",
+      "students"
+     ]
+    },
+    {
+     "token": "_name",
+     "logprob": -1.1920930376163597e-07,
+     "top": [
+      "_name",
+      "Name",
+      " Name",
+      "_NAME",
+      "_names"
+     ]
+    }
+   ],
+   "missing": [
+    "33 logprob entries for eval_count 34"
+   ]
+  },
+  "timing": {
+   "load_s": 14.362,
+   "total_s": 17.691,
+   "prompt_tokens": 302,
+   "prompt_tok_per_s": 185.09,
+   "eval_tokens": 34,
+   "eval_tok_per_s": 20.28,
+   "wall_s": 17.702,
+   "done_reason": "stop"
+  }
+ },
+ {
+  "item": 1,
+  "case": "vision-template-image",
+  "at": "2026-09-29T04:25:34+00:00",
+  "role": "vision",
+  "shape": "template",
+  "task": "phase0_logprobs_vision_template_image",
+  "model": "numind/nuextract3:Q6_K",
+  "input": "image",
+  "request_has_format": false,
+  "think": false,
+  "statuses": [
+   "complete"
+  ],
+  "valid": true,
+  "failure": null,
+  "parsed": {
+   "student_name": "Lê Văn Bình",
+   "class_name": "7C3",
+   "q1": "B",
+   "q2": "plays"
+  },
+  "answers_correct": {
+   "student_name": true,
+   "class_name": true,
+   "q1": true,
+   "q2": true
+  },
+  "response_text": "{\"student_name\": \"Lê Văn Bình\", \"class_name\": \"7C3\", \"q1\": \"B\", \"q2\": \"plays\"}",
+  "thinking_chars": 0,
+  "logprob_text_chars": 78,
+  "logprobs_cover": "response",
+  "logprobs": {
+   "count": 33,
+   "with_top_logprobs": 33,
+   "top_logprobs_sizes": [
+    5
+   ],
+   "eval_count": 34,
+   "sample": [
+    {
+     "token": "{\"",
+     "logprob": -0.0008289672550745308,
+     "top": [
+      "{\"",
+      "{",
+      "{}",
+      "\"{",
+      "{'"
+     ]
+    },
+    {
+     "token": "student",
+     "logprob": -2.622607780722319e-06,
+     "top": [
+      "student",
+      " student",
+      ".student",
+      "Student",
+      "students"
+     ]
+    },
+    {
+     "token": "_name",
+     "logprob": -1.1920930376163597e-07,
+     "top": [
+      "_name",
+      "Name",
+      " Name",
+      "_NAME",
+      " name"
+     ]
+    }
+   ],
+   "missing": [
+    "33 logprob entries for eval_count 34"
+   ]
+  },
+  "timing": {
+   "load_s": 0.004,
+   "total_s": 44.25,
+   "prompt_tokens": 941,
+   "prompt_tok_per_s": 22.23,
+   "eval_tokens": 34,
+   "eval_tok_per_s": 19.34,
+   "wall_s": 44.281,
+   "done_reason": "stop"
+  }
+ },
+ {
+  "item": 1,
+  "case": "vision-template+format-text",
+  "at": "2026-09-29T04:25:36+00:00",
+  "role": "vision",
+  "shape": "template+format",
+  "task": "phase0_logprobs_vision_template_format_text",
+  "model": "numind/nuextract3:Q6_K",
+  "input": "text",
+  "request_has_format": true,
+  "think": false,
+  "statuses": [
+   "complete"
+  ],
+  "valid": true,
+  "failure": null,
+  "parsed": {
+   "student_name": "Lê Văn Bình",
+   "class_name": "7C3",
+   "q1": "B",
+   "q2": "plays"
+  },
+  "answers_correct": {
+   "student_name": true,
+   "class_name": true,
+   "q1": true,
+   "q2": true
+  },
+  "response_text": "{\"student_name\": \"Lê Văn Bình\", \"class_name\": \"7C3\", \"q1\": \"B\", \"q2\": \"plays\"}",
+  "thinking_chars": 0,
+  "logprob_text_chars": 78,
+  "logprobs_cover": "response",
+  "logprobs": {
+   "count": 33,
+   "with_top_logprobs": 33,
+   "top_logprobs_sizes": [
+    5
+   ],
+   "eval_count": 34,
+   "sample": [
+    {
+     "token": "{\"",
+     "logprob": -0.0003722406690940261,
+     "top": [
+      "{\"",
+      "{",
+      "{}",
+      "\"{",
+      "{'"
+     ]
+    },
+    {
+     "token": "student",
+     "logprob": -3.695494797284482e-06,
+     "top": [
+      "student",
+      " student",
+      ".student",
+      "Student",
+      "students"
+     ]
+    },
+    {
+     "token": "_name",
+     "logprob": -1.1920930376163597e-07,
+     "top": [
+      "_name",
+      "Name",
+      " Name",
+      "_NAME",
+      "_names"
+     ]
+    }
+   ],
+   "missing": [
+    "33 logprob entries for eval_count 34"
+   ]
+  },
+  "timing": {
+   "load_s": 0.004,
+   "total_s": 2.295,
+   "prompt_tokens": 302,
+   "prompt_tok_per_s": 2735.41,
+   "eval_tokens": 34,
+   "eval_tok_per_s": 17.43,
+   "wall_s": 2.328,
+   "done_reason": "stop"
+  }
+ },
+ {
+  "item": 1,
+  "case": "vision-template+format-image",
+  "at": "2026-09-29T04:25:39+00:00",
+  "role": "vision",
+  "shape": "template+format",
+  "task": "phase0_logprobs_vision_template_format_image",
+  "model": "numind/nuextract3:Q6_K",
+  "input": "image",
+  "request_has_format": true,
+  "think": false,
+  "statuses": [
+   "complete"
+  ],
+  "valid": true,
+  "failure": null,
+  "parsed": {
+   "student_name": "Lê Văn Bình",
+   "class_name": "7C3",
+   "q1": "B",
+   "q2": "plays"
+  },
+  "answers_correct": {
+   "student_name": true,
+   "class_name": true,
+   "q1": true,
+   "q2": true
+  },
+  "response_text": "{\"student_name\": \"Lê Văn Bình\", \"class_name\": \"7C3\", \"q1\": \"B\", \"q2\": \"plays\"}",
+  "thinking_chars": 0,
+  "logprob_text_chars": 78,
+  "logprobs_cover": "response",
+  "logprobs": {
+   "count": 33,
+   "with_top_logprobs": 33,
+   "top_logprobs_sizes": [
+    5
+   ],
+   "eval_count": 34,
+   "sample": [
+    {
+     "token": "{\"",
+     "logprob": -0.0008289672550745308,
+     "top": [
+      "{\"",
+      "{",
+      "{}",
+      "\"{",
+      "{'"
+     ]
+    },
+    {
+     "token": "student",
+     "logprob": -2.622607780722319e-06,
+     "top": [
+      "student",
+      " student",
+      ".student",
+      "Student",
+      "students"
+     ]
+    },
+    {
+     "token": "_name",
+     "logprob": -1.1920930376163597e-07,
+     "top": [
+      "_name",
+      "Name",
+      " Name",
+      "_NAME",
+      " name"
+     ]
+    }
+   ],
+   "missing": [
+    "33 logprob entries for eval_count 34"
+   ]
+  },
+  "timing": {
+   "load_s": 0.004,
+   "total_s": 2.405,
+   "prompt_tokens": 941,
+   "prompt_tok_per_s": 7751.68,
+   "eval_tokens": 34,
+   "eval_tok_per_s": 16.65,
+   "wall_s": 2.421,
+   "done_reason": "stop"
+  }
+ },
+ {
+  "item": 1,
+  "case": "reasoning-format-text",
+  "at": "2026-09-29T04:25:55+00:00",
+  "role": "reasoning",
+  "shape": "format",
+  "task": "phase0_logprobs_reasoning_format_text",
+  "model": "qwen3.5:4b",
+  "input": "text",
+  "request_has_format": true,
+  "think": false,
+  "statuses": [
+   "complete"
+  ],
+  "valid": true,
+  "failure": null,
+  "parsed": {
+   "student_name": "Lê Văn Bình",
+   "class_name": "7C3",
+   "q1": "B",
+   "q2": "plays"
+  },
+  "answers_correct": {
+   "student_name": true,
+   "class_name": true,
+   "q1": true,
+   "q2": true
+  },
+  "response_text": "{\n  \"student_name\": \"Lê Văn Bình\",\n  \"class_name\": \"7C3\",\n  \"q1\": \"B\",\n  \"q2\": \"plays\"\n}",
+  "thinking_chars": 0,
+  "logprob_text_chars": 88,
+  "logprobs_cover": "response",
+  "logprobs": {
+   "count": 44,
+   "with_top_logprobs": 44,
+   "top_logprobs_sizes": [
+    5
+   ],
+   "eval_count": 45,
+   "sample": [
+    {
+     "token": "{",
+     "logprob": -0.038556069135665894,
+     "top": [
+      "{",
+      "{\"",
+      "```",
+      "[",
+      "[{"
+     ]
+    },
+    {
+     "token": "\n",
+     "logprob": -4.589663149090484e-05,
+     "top": [
+      "\n",
+      " \"",
+      "\n\n",
+      "<",
+      "(\""
+     ]
+    },
+    {
+     "token": " ",
+     "logprob": -0.0055197542533278465,
+     "top": [
+      " ",
+      "\"name",
+      "\"",
+      " \"",
+      "   "
+     ]
+    }
+   ],
+   "missing": [
+    "44 logprob entries for eval_count 45"
+   ]
+  },
+  "timing": {
+   "load_s": 14.009,
+   "total_s": 15.895,
+   "prompt_tokens": 211,
+   "prompt_tok_per_s": 229.65,
+   "eval_tokens": 45,
+   "eval_tok_per_s": 46.86,
+   "wall_s": 15.922,
+   "done_reason": "stop"
+  }
+ },
+ {
+  "item": 1,
+  "case": "reasoning-format-image",
+  "at": "2026-09-29T04:26:04+00:00",
+  "role": "reasoning",
+  "shape": "format",
+  "task": "phase0_logprobs_reasoning_format_image",
+  "model": "qwen3.5:4b",
+  "input": "image",
+  "request_has_format": true,
+  "think": false,
+  "statuses": [
+   "complete"
+  ],
+  "valid": true,
+  "failure": null,
+  "parsed": {
+   "student_name": "Lê Văn Bình",
+   "class_name": "7C3",
+   "q1": "B",
+   "q2": "plays"
+  },
+  "answers_correct": {
+   "student_name": true,
+   "class_name": true,
+   "q1": true,
+   "q2": true
+  },
+  "response_text": "{\n  \"student_name\": \"Lê Văn Bình\",\n  \"class_name\": \"7C3\",\n  \"q1\": \"B\",\n  \"q2\": \"plays\"\n}",
+  "thinking_chars": 0,
+  "logprob_text_chars": 88,
+  "logprobs_cover": "response",
+  "logprobs": {
+   "count": 44,
+   "with_top_logprobs": 44,
+   "top_logprobs_sizes": [
+    5
+   ],
+   "eval_count": 45,
+   "sample": [
+    {
+     "token": "{",
+     "logprob": -0.08276746422052383,
+     "top": [
+      "{",
+      "```",
+      "{'",
+      "{\"",
+      "'{"
+     ]
+    },
+    {
+     "token": "\n",
+     "logprob": -3.5644214221974835e-05,
+     "top": [
+      "\n",
+      " ",
+      "  \n",
+      "null",
+      " \""
+     ]
+    },
+    {
+     "token": " ",
+     "logprob": -0.0018586493097245693,
+     "top": [
+      " ",
+      " \"",
+      "\"",
+      "\"H",
+      "\"name"
+     ]
+    }
+   ],
+   "missing": [
+    "44 logprob entries for eval_count 45"
+   ]
+  },
+  "timing": {
+   "load_s": 0.003,
+   "total_s": 8.782,
+   "prompt_tokens": 849,
+   "prompt_tok_per_s": 111.12,
+   "eval_tokens": 45,
+   "eval_tok_per_s": 45.52,
+   "wall_s": 8.797,
+   "done_reason": "stop"
+  }
+ },
+ {
+  "item": 1,
+  "case": "reasoning-format-think",
+  "at": "2026-09-29T04:26:21+00:00",
+  "role": "reasoning",
+  "shape": "format",
+  "task": "phase0_logprobs_reasoning_format_think",
+  "model": "qwen3.5:4b",
+  "input": "text",
+  "request_has_format": true,
+  "think": true,
+  "statuses": [
+   "complete"
+  ],
+  "valid": true,
+  "failure": null,
+  "parsed": {
+   "student_name": "Lê Văn Bình",
+   "class_name": "7C3",
+   "q1": "B",
+   "q2": "plays"
+  },
+  "answers_correct": {
+   "student_name": true,
+   "class_name": true,
+   "q1": true,
+   "q2": true
+  },
+  "response_text": "{\n  \"student_name\": \"Lê Văn Bình\",\n  \"class_name\": \"7C3\",\n  \"q1\": \"B\",\n  \"q2\": \"plays\"\n}",
+  "thinking_chars": 2787,
+  "logprob_text_chars": 2884,
+  "logprobs_cover": "other",
+  "logprobs": {
+   "count": 887,
+   "with_top_logprobs": 887,
+   "top_logprobs_sizes": [
+    5
+   ],
+   "eval_count": 888,
+   "sample": [
+    {
+     "token": "Thinking",
+     "logprob": -0.011858221143484116,
+     "top": [
+      "Thinking",
+      "Okay",
+      "The",
+      "Here",
+      "Alright"
+     ]
+    },
+    {
+     "token": " Process",
+     "logprob": -0.00014771122368983924,
+     "top": [
+      " Process",
+      " process",
+      "Process",
+      "\n\n",
+      " PROCESS"
+     ]
+    },
+    {
+     "token": ":",
+     "logprob": -7.867844033171423e-06,
+     "top": [
+      ":",
+      "\n\n",
+      "：",
+      ";",
+      " :"
+     ]
+    }
+   ],
+   "missing": [
+    "887 logprob entries for eval_count 888"
+   ]
+  },
+  "timing": {
+   "load_s": 0.002,
+   "total_s": 17.441,
+   "prompt_tokens": 209,
+   "prompt_tok_per_s": 3900.49,
+   "eval_tokens": 888,
+   "eval_tok_per_s": 51.79,
+   "wall_s": 17.469,
+   "done_reason": "stop"
+  }
+ },
+ {
+  "item": 2,
+  "case": "template",
+  "at": "2026-09-29T04:27:15+00:00",
+  "role": "vision",
+  "shape": "template",
+  "task": "phase0_nuextract_template_image",
+  "model": "numind/nuextract3:Q6_K",
+  "input": "image",
+  "request_has_format": false,
+  "think": false,
+  "statuses": [
+   "complete"
+  ],
+  "valid": true,
+  "failure": null,
+  "parsed": {
+   "student_name": "Lê Văn Bình",
+   "class_name": "7C3",
+   "q1": "B",
+   "q2": "plays"
+  },
+  "answers_correct": {
+   "student_name": true,
+   "class_name": true,
+   "q1": true,
+   "q2": true
+  },
+  "response_text": "{\"student_name\": \"Lê Văn Bình\", \"class_name\": \"7C3\", \"q1\": \"B\", \"q2\": \"plays\"}",
+  "thinking_chars": 0,
+  "logprob_text_chars": 78,
+  "logprobs_cover": "response",
+  "logprobs": {
+   "count": 33,
+   "with_top_logprobs": 33,
+   "top_logprobs_sizes": [
+    5
+   ],
+   "eval_count": 34,
+   "sample": [
+    {
+     "token": "{\"",
+     "logprob": -0.0008233001572079957,
+     "top": [
+      "{\"",
+      "{",
+      "{}",
+      "\"{",
+      "{'"
+     ]
+    },
+    {
+     "token": "student",
+     "logprob": -2.622607780722319e-06,
+     "top": [
+      "student",
+      " student",
+      ".student",
+      "Student",
+      "students"
+     ]
+    },
+    {
+     "token": "_name",
+     "logprob": -1.1920930376163597e-07,
+     "top": [
+      "_name",
+      "Name",
+      " Name",
+      "_NAME",
+      " name"
+     ]
+    }
+   ],
+   "missing": [
+    "33 logprob entries for eval_count 34"
+   ]
+  },
+  "timing": {
+   "load_s": 17.022,
+   "total_s": 53.817,
+   "prompt_tokens": 941,
+   "prompt_tok_per_s": 26.9,
+   "eval_tokens": 34,
+   "eval_tok_per_s": 18.99,
+   "wall_s": 53.843,
+   "done_reason": "stop"
+  }
+ },
+ {
+  "item": 2,
+  "case": "template+format",
+  "at": "2026-09-29T04:27:17+00:00",
+  "role": "vision",
+  "shape": "template+format",
+  "task": "phase0_nuextract_template_format_image",
+  "model": "numind/nuextract3:Q6_K",
+  "input": "image",
+  "request_has_format": true,
+  "think": false,
+  "statuses": [
+   "complete"
+  ],
+  "valid": true,
+  "failure": null,
+  "parsed": {
+   "student_name": "Lê Văn Bình",
+   "class_name": "7C3",
+   "q1": "B",
+   "q2": "plays"
+  },
+  "answers_correct": {
+   "student_name": true,
+   "class_name": true,
+   "q1": true,
+   "q2": true
+  },
+  "response_text": "{\"student_name\": \"Lê Văn Bình\", \"class_name\": \"7C3\", \"q1\": \"B\", \"q2\": \"plays\"}",
+  "thinking_chars": 0,
+  "logprob_text_chars": 78,
+  "logprobs_cover": "response",
+  "logprobs": {
+   "count": 33,
+   "with_top_logprobs": 33,
+   "top_logprobs_sizes": [
+    5
+   ],
+   "eval_count": 34,
+   "sample": [
+    {
+     "token": "{\"",
+     "logprob": -0.0008233001572079957,
+     "top": [
+      "{\"",
+      "{",
+      "{}",
+      "\"{",
+      "{'"
+     ]
+    },
+    {
+     "token": "student",
+     "logprob": -2.622607780722319e-06,
+     "top": [
+      "student",
+      " student",
+      ".student",
+      "Student",
+      "students"
+     ]
+    },
+    {
+     "token": "_name",
+     "logprob": -1.1920930376163597e-07,
+     "top": [
+      "_name",
+      "Name",
+      " Name",
+      "_NAME",
+      " name"
+     ]
+    }
+   ],
+   "missing": [
+    "33 logprob entries for eval_count 34"
+   ]
+  },
+  "timing": {
+   "load_s": 0.006,
+   "total_s": 2.177,
+   "prompt_tokens": 941,
+   "prompt_tok_per_s": 7319.71,
+   "eval_tokens": 34,
+   "eval_tok_per_s": 16.95,
+   "wall_s": 2.218,
+   "done_reason": "stop"
+  }
+ },
+ {
+  "item": 3,
+  "case": "vision-template-image",
+  "at": "2026-09-29T04:27:20+00:00",
+  "role": "vision",
+  "q1_tokens": {
+   "found": true,
+   "value": "B",
+   "tokens": [
+    {
+     "token": "B",
+     "prob": 0.9999,
+     "choice_probs": {
+      "A": 0.0,
+      "B": 0.9999,
+      "C": 0.0,
+      "D": 0.0
+     },
+     "other_alternatives": {
+      "b": 0.0
+     }
+    }
+   ],
+   "token_count": 1,
+   "single_token": true
+  },
+  "task": "phase0_letter_vision_template_image",
+  "model": "numind/nuextract3:Q6_K",
+  "input": "image",
+  "request_has_format": false,
+  "think": false,
+  "statuses": [
+   "complete"
+  ],
+  "valid": true,
+  "failure": null,
+  "parsed": {
+   "student_name": "Lê Văn Bình",
+   "class_name": "7C3",
+   "q1": "B",
+   "q2": "plays"
+  },
+  "answers_correct": {
+   "student_name": true,
+   "class_name": true,
+   "q1": true,
+   "q2": true
+  },
+  "response_text": "{\"student_name\": \"Lê Văn Bình\", \"class_name\": \"7C3\", \"q1\": \"B\", \"q2\": \"plays\"}",
+  "thinking_chars": 0,
+  "logprob_text_chars": 78,
+  "logprobs_cover": "response",
+  "logprobs": {
+   "count": 33,
+   "with_top_logprobs": 33,
+   "top_logprobs_sizes": [
+    5
+   ],
+   "eval_count": 34,
+   "sample": [
+    {
+     "token": "{\"",
+     "logprob": -0.0008233001572079957,
+     "top": [
+      "{\"",
+      "{",
+      "{}",
+      "\"{",
+      "{'"
+     ]
+    },
+    {
+     "token": "student",
+     "logprob": -2.622607780722319e-06,
+     "top": [
+      "student",
+      " student",
+      ".student",
+      "Student",
+      "students"
+     ]
+    },
+    {
+     "token": "_name",
+     "logprob": -1.1920930376163597e-07,
+     "top": [
+      "_name",
+      "Name",
+      " Name",
+      "_NAME",
+      " name"
+     ]
+    }
+   ],
+   "missing": [
+    "33 logprob entries for eval_count 34"
+   ]
+  },
+  "timing": {
+   "load_s": 0.005,
+   "total_s": 2.28,
+   "prompt_tokens": 941,
+   "prompt_tok_per_s": 6841.45,
+   "eval_tokens": 34,
+   "eval_tok_per_s": 16.16,
+   "wall_s": 2.312,
+   "done_reason": "stop"
+  }
+ },
+ {
+  "item": 3,
+  "case": "reasoning-format-image",
+  "at": "2026-09-29T04:27:42+00:00",
+  "role": "reasoning",
+  "q1_tokens": {
+   "found": true,
+   "value": "B",
+   "tokens": [
+    {
+     "token": "B",
+     "prob": 0.9992,
+     "choice_probs": {
+      "A": 0.0001,
+      "B": 0.9992,
+      "C": 0.0001,
+      "D": 0.0001
+     },
+     "other_alternatives": {
+      "b": 0.0003
+     }
+    }
+   ],
+   "token_count": 1,
+   "single_token": true
+  },
+  "task": "phase0_letter_reasoning_format_image",
+  "model": "qwen3.5:4b",
+  "input": "image",
+  "request_has_format": true,
+  "think": false,
+  "statuses": [
+   "complete"
+  ],
+  "valid": true,
+  "failure": null,
+  "parsed": {
+   "student_name": "Lê Văn Bình",
+   "class_name": "7C3",
+   "q1": "B",
+   "q2": "plays"
+  },
+  "answers_correct": {
+   "student_name": true,
+   "class_name": true,
+   "q1": true,
+   "q2": true
+  },
+  "response_text": "{\n  \"student_name\": \"Lê Văn Bình\",\n  \"class_name\": \"7C3\",\n  \"q1\": \"B\",\n  \"q2\": \"plays\"\n}",
+  "thinking_chars": 0,
+  "logprob_text_chars": 88,
+  "logprobs_cover": "response",
+  "logprobs": {
+   "count": 44,
+   "with_top_logprobs": 44,
+   "top_logprobs_sizes": [
+    5
+   ],
+   "eval_count": 45,
+   "sample": [
+    {
+     "token": "{",
+     "logprob": -0.08276746422052383,
+     "top": [
+      "{",
+      "```",
+      "{'",
+      "{\"",
+      "'{"
+     ]
+    },
+    {
+     "token": "\n",
+     "logprob": -3.5644214221974835e-05,
+     "top": [
+      "\n",
+      " ",
+      "  \n",
+      "null",
+      " \""
+     ]
+    },
+    {
+     "token": " ",
+     "logprob": -0.0018586493097245693,
+     "top": [
+      " ",
+      " \"",
+      "\"",
+      "\"H",
+      "\"name"
+     ]
+    }
+   ],
+   "missing": [
+    "44 logprob entries for eval_count 45"
+   ]
+  },
+  "timing": {
+   "load_s": 13.27,
+   "total_s": 22.004,
+   "prompt_tokens": 849,
+   "prompt_tok_per_s": 110.32,
+   "eval_tokens": 45,
+   "eval_tok_per_s": 44.28,
+   "wall_s": 22.031,
+   "done_reason": "stop"
+  }
+ },
+ {
+  "item": 4,
+  "case": "vision",
+  "at": "2026-09-29T04:28:35+00:00",
+  "env": "baseline",
+  "server_env": {
+   "OLLAMA_MAX_LOADED_MODELS": "1",
+   "OLLAMA_NUM_PARALLEL": "1",
+   "OLLAMA_FLASH_ATTENTION": "0",
+   "OLLAMA_KV_CACHE_TYPE": "f16",
+   "OLLAMA_NOPRUNE": "1"
+  },
+  "role": "vision",
+  "num_ctx": 16384,
+  "gpu_idle": {
+   "name": "NVIDIA GeForce GTX 1660 Ti",
+   "used_mib": 0,
+   "total_mib": 6144,
+   "driver": "556.12"
+  },
+  "vram": {
+   "loaded": true,
+   "nvidia_smi": {
+    "name": "NVIDIA GeForce GTX 1660 Ti",
+    "used_mib": 5953,
+    "total_mib": 6144,
+    "driver": "556.12"
+   },
+   "size_mib": 9436,
+   "size_vram_mib": 7954,
+   "gpu_share": 0.843,
+   "fully_on_gpu": false,
+   "context_length": 16384
+  },
+  "model": "numind/nuextract3:Q6_K",
+  "input": "image",
+  "statuses": [
+   "complete"
+  ],
+  "valid": true,
+  "timing": {
+   "load_s": 13.637,
+   "total_s": 52.257,
+   "prompt_tokens": 865,
+   "prompt_tok_per_s": 27.04,
+   "eval_tokens": 115,
+   "eval_tok_per_s": 17.39,
+   "wall_s": 52.281,
+   "done_reason": "stop"
+  },
+  "lines": [
+   "ENGLISH TEST - GRADE 8 (synthetic page)",
+   "Họ và tên: Lê Văn Bình",
+   "Lớp: 7C3",
+   "I. Choose the best answer (A, B, C or D).",
+   "Question 1. She ___ to school every day.",
+   "A. go",
+   "B. goes",
+   "C. going",
+   "D. gone",
+   "II. Give the correct form of the verb in brackets.",
+   "Question 2. My brother plays (play) football on Sundays."
+  ]
+ },
+ {
+  "item": 4,
+  "case": "reasoning",
+  "at": "2026-09-29T04:28:57+00:00",
+  "env": "baseline",
+  "server_env": {
+   "OLLAMA_MAX_LOADED_MODELS": "1",
+   "OLLAMA_NUM_PARALLEL": "1",
+   "OLLAMA_FLASH_ATTENTION": "0",
+   "OLLAMA_KV_CACHE_TYPE": "f16",
+   "OLLAMA_NOPRUNE": "1"
+  },
+  "role": "reasoning",
+  "num_ctx": 16384,
+  "gpu_idle": {
+   "name": "NVIDIA GeForce GTX 1660 Ti",
+   "used_mib": 0,
+   "total_mib": 6144,
+   "driver": "556.12"
+  },
+  "vram": {
+   "loaded": true,
+   "nvidia_smi": {
+    "name": "NVIDIA GeForce GTX 1660 Ti",
+    "used_mib": 5953,
+    "total_mib": 6144,
+    "driver": "556.12"
+   },
+   "size_mib": 7995,
+   "size_vram_mib": 7995,
+   "gpu_share": 1.0,
+   "fully_on_gpu": true,
+   "context_length": 16384
+  },
+  "model": "qwen3.5:4b",
+  "input": "image",
+  "statuses": [
+   "complete"
+  ],
+  "valid": true,
+  "timing": {
+   "load_s": 10.547,
+   "total_s": 21.175,
+   "prompt_tokens": 818,
+   "prompt_tok_per_s": 105.93,
+   "eval_tokens": 145,
+   "eval_tok_per_s": 50.42,
+   "wall_s": 21.203,
+   "done_reason": "stop"
+  },
+  "lines": [
+   "ENGLISH TEST - GRADE 8 (synthetic page)",
+   "Họ và tên: Lê Văn Bình",
+   "Lớp: 7C3",
+   "I. Choose the best answer (A, B, C or D).",
+   "Question 1. She ___ to school every day.",
+   "A. go",
+   "B. goes",
+   "C. going",
+   "D. gone",
+   "II. Give the correct form of the verb in brackets.",
+   "Question 2. My brother ______ (play) football on Sundays."
+  ]
+ },
+ {
+  "item": 5,
+  "case": "vision",
+  "at": "2026-09-29T04:29:33+00:00",
+  "env": "flash_attention=1 kv_cache=q8_0",
+  "server_env": {
+   "OLLAMA_MAX_LOADED_MODELS": "1",
+   "OLLAMA_NUM_PARALLEL": "1",
+   "OLLAMA_FLASH_ATTENTION": "1",
+   "OLLAMA_KV_CACHE_TYPE": "q8_0",
+   "OLLAMA_NOPRUNE": "1"
+  },
+  "error": null,
+  "role": "vision",
+  "num_ctx": 16384,
+  "gpu_idle": {
+   "name": "NVIDIA GeForce GTX 1660 Ti",
+   "used_mib": 0,
+   "total_mib": 6144,
+   "driver": "556.12"
+  },
+  "vram": {
+   "loaded": true,
+   "nvidia_smi": {
+    "name": "NVIDIA GeForce GTX 1660 Ti",
+    "used_mib": 4349,
+    "total_mib": 6144,
+    "driver": "556.12"
+   },
+   "size_mib": 4567,
+   "size_vram_mib": 3526,
+   "gpu_share": 0.772,
+   "fully_on_gpu": false,
+   "context_length": 16384
+  },
+  "model": "numind/nuextract3:Q6_K",
+  "input": "image",
+  "statuses": [
+   "complete"
+  ],
+  "valid": true,
+  "timing": {
+   "load_s": 9.357,
+   "total_s": 19.885,
+   "prompt_tokens": 865,
+   "prompt_tok_per_s": 160.09,
+   "eval_tokens": 115,
+   "eval_tok_per_s": 22.55,
+   "wall_s": 19.921,
+   "done_reason": "stop"
+  },
+  "lines": [
+   "ENGLISH TEST - GRADE 8 (synthetic page)",
+   "Họ và tên: Lê Văn Bình",
+   "Lớp: 7C3",
+   "I. Choose the best answer (A, B, C or D).",
+   "Question 1. She ___ to school every day.",
+   "A. go",
+   "B. goes",
+   "C. going",
+   "D. gone",
+   "II. Give the correct form of the verb in brackets.",
+   "Question 2. My brother plays (play) football on Sundays."
+  ],
+  "answers": {
+   "valid": true,
+   "parsed": {
+    "student_name": "Lê Văn Bình",
+    "class_name": "7C3",
+    "q1": "B",
+    "q2": "plays"
+   },
+   "answers_correct": {
+    "student_name": true,
+    "class_name": true,
+    "q1": true,
+    "q2": true
+   },
+   "statuses": [
+    "complete"
+   ],
+   "logprobs_count": 33
+  },
+  "vs_baseline": {
+   "size_vram_mib": {
+    "baseline": 7954,
+    "fa_q8": 3526,
+    "diff": -4428
+   },
+   "size_mib": {
+    "baseline": 9436,
+    "fa_q8": 4567,
+    "diff": -4869
+   },
+   "fully_on_gpu": {
+    "baseline": false,
+    "fa_q8": false
+   },
+   "eval_tok_per_s": {
+    "baseline": 17.39,
+    "fa_q8": 22.55,
+    "diff": 5.16
+   },
+   "prompt_tok_per_s": {
+    "baseline": 27.04,
+    "fa_q8": 160.09,
+    "diff": 133.05
+   },
+   "load_s": {
+    "baseline": 13.637,
+    "fa_q8": 9.357,
+    "diff": -4.28
+   },
+   "transcript_valid": {
+    "baseline": true,
+    "fa_q8": true
+   },
+   "same_lines": true
+  },
+  "server_log": [
+   "time=2026-09-29T11:28:58.723+07:00 level=INFO source=routes.go:2005 msg=\"server config\" env=\"map[CUDA_VISIBLE_DEVICES: GGML_VK_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: LLAMA_ARG_FIT: LLAMA_ARG_FIT_TARGET: NO_PROXY: OLLAMA_CONTEXT_LE",
+   "time=2026-09-29T11:29:06.850+07:00 level=INFO source=llama_server.go:436 msg=\"starting llama-server\" cmd=\"C:\\\\Users\\\\HOME\\\\AppData\\\\Local\\\\Programs\\\\Ollama\\\\lib\\\\ollama\\\\llama-server.exe --model C:\\\\Users\\\\HOME\\\\.ollama\\\\models\\\\blobs\\\\sha256-90b24c336baab3aa0fb8c822a96d7b9f44e72b35d8e947345e07fe791",
+   "llama_context: flash_attn            = enabled",
+   "llama_kv_cache:        CPU KV buffer size =    34.00 MiB",
+   "llama_kv_cache:      CUDA0 KV buffer size =   238.00 MiB",
+   "llama_kv_cache: size =  272.00 MiB ( 16384 cells,   8 layers,  1/1 seqs), K (q8_0):  136.00 MiB, V (q8_0):  136.00 MiB",
+   "llama_kv_cache: attn_rot_k = 1, n_embd_head_k_all = 256",
+   "llama_kv_cache: attn_rot_v = 1, n_embd_head_k_all = 256",
+   "cmn  common_init_: KV cache shifting is not supported for this context, disabling KV cache shifting",
+   "warmup: flash attention is enabled"
+  ]
+ },
+ {
+  "item": 5,
+  "case": "reasoning",
+  "at": "2026-09-29T04:29:57+00:00",
+  "env": "flash_attention=1 kv_cache=q8_0",
+  "server_env": {
+   "OLLAMA_MAX_LOADED_MODELS": "1",
+   "OLLAMA_NUM_PARALLEL": "1",
+   "OLLAMA_FLASH_ATTENTION": "1",
+   "OLLAMA_KV_CACHE_TYPE": "q8_0",
+   "OLLAMA_NOPRUNE": "1"
+  },
+  "error": null,
+  "role": "reasoning",
+  "num_ctx": 16384,
+  "gpu_idle": {
+   "name": "NVIDIA GeForce GTX 1660 Ti",
+   "used_mib": 0,
+   "total_mib": 6144,
+   "driver": "556.12"
+  },
+  "vram": {
+   "loaded": true,
+   "nvidia_smi": {
+    "name": "NVIDIA GeForce GTX 1660 Ti",
+    "used_mib": 4077,
+    "total_mib": 6144,
+    "driver": "556.12"
+   },
+   "size_mib": 3189,
+   "size_vram_mib": 3189,
+   "gpu_share": 1.0,
+   "fully_on_gpu": true,
+   "context_length": 16384
+  },
+  "model": "qwen3.5:4b",
+  "input": "image",
+  "statuses": [
+   "complete"
+  ],
+  "valid": true,
+  "timing": {
+   "load_s": 5.494,
+   "total_s": 15.413,
+   "prompt_tokens": 818,
+   "prompt_tok_per_s": 115.1,
+   "eval_tokens": 144,
+   "eval_tok_per_s": 51.57,
+   "wall_s": 15.453,
+   "done_reason": "stop"
+  },
+  "lines": [
+   "ENGLISH TEST - GRADE 8 (synthetic page)",
+   "Họ và tên: Lê Văn Bình",
+   "Lớp: 7C3",
+   "I. Choose the best answer (A, B, C or D).",
+   "Question 1. She ___ to school every day.",
+   "A. go",
+   "B. goes",
+   "C. going",
+   "D. gone",
+   "II. Give the correct form of the verb in brackets.",
+   "Question 2. My brother (play) football on Sundays."
+  ],
+  "answers": {
+   "valid": true,
+   "parsed": {
+    "student_name": "Lê Văn Bình",
+    "class_name": "7C3",
+    "q1": "B",
+    "q2": "plays"
+   },
+   "answers_correct": {
+    "student_name": true,
+    "class_name": true,
+    "q1": true,
+    "q2": true
+   },
+   "statuses": [
+    "complete"
+   ],
+   "logprobs_count": 44
+  },
+  "vs_baseline": {
+   "size_vram_mib": {
+    "baseline": 7995,
+    "fa_q8": 3189,
+    "diff": -4806
+   },
+   "size_mib": {
+    "baseline": 7995,
+    "fa_q8": 3189,
+    "diff": -4806
+   },
+   "fully_on_gpu": {
+    "baseline": true,
+    "fa_q8": true
+   },
+   "eval_tok_per_s": {
+    "baseline": 50.42,
+    "fa_q8": 51.57,
+    "diff": 1.15
+   },
+   "prompt_tok_per_s": {
+    "baseline": 105.93,
+    "fa_q8": 115.1,
+    "diff": 9.17
+   },
+   "load_s": {
+    "baseline": 10.547,
+    "fa_q8": 5.494,
+    "diff": -5.05
+   },
+   "transcript_valid": {
+    "baseline": true,
+    "fa_q8": true
+   },
+   "same_lines": false
+  },
+  "server_log": [
+   "cmn  common_init_: KV cache shifting is not supported for this context, disabling KV cache shifting",
+   "warmup: flash attention is enabled",
+   "time=2026-09-29T11:29:35.779+07:00 level=INFO source=llama_server.go:436 msg=\"starting llama-server\" cmd=\"C:\\\\Users\\\\HOME\\\\AppData\\\\Local\\\\Programs\\\\Ollama\\\\lib\\\\ollama\\\\llama-server.exe --model C:\\\\Users\\\\HOME\\\\.ollama\\\\models\\\\blobs\\\\sha256-81fb60c7daa80fc1123380b98970b320ae233409f0f71a72ed7b9b0d6",
+   "llama_context: flash_attn            = enabled",
+   "llama_kv_cache:      CUDA0 KV buffer size =   272.00 MiB",
+   "llama_kv_cache: size =  272.00 MiB ( 16384 cells,   8 layers,  1/1 seqs), K (q8_0):  136.00 MiB, V (q8_0):  136.00 MiB",
+   "llama_kv_cache: attn_rot_k = 1, n_embd_head_k_all = 256",
+   "llama_kv_cache: attn_rot_v = 1, n_embd_head_k_all = 256",
+   "cmn  common_init_: KV cache shifting is not supported for this context, disabling KV cache shifting",
+   "warmup: flash attention is enabled"
+  ]
+ },
+ {
+  "item": 6,
+  "case": "vision-reasoning-vision",
+  "at": "2026-09-29T04:31:56+00:00",
+  "server_env": {
+   "OLLAMA_MAX_LOADED_MODELS": "1",
+   "OLLAMA_NUM_PARALLEL": "1",
+   "OLLAMA_FLASH_ATTENTION": "0",
+   "OLLAMA_KV_CACHE_TYPE": "f16",
+   "OLLAMA_NOPRUNE": "1"
+  },
+  "steps": [
+   {
+    "n": 1,
+    "role": "vision",
+    "model": "numind/nuextract3:Q6_K",
+    "valid": true,
+    "load_s": 11.719,
+    "wall_s": 48.047,
+    "loaded_after": [
+     "numind/nuextract3:Q6_K"
+    ]
+   },
+   {
+    "n": 2,
+    "role": "reasoning",
+    "model": "qwen3.5:4b",
+    "valid": true,
+    "load_s": 14.697,
+    "wall_s": 16.765,
+    "loaded_after": [
+     "qwen3.5:4b"
+    ]
+   },
+   {
+    "n": 3,
+    "role": "vision",
+    "model": "numind/nuextract3:Q6_K",
+    "valid": true,
+    "load_s": 18.069,
+    "wall_s": 53.797,
+    "loaded_after": [
+     "numind/nuextract3:Q6_K"
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,16 @@
+{
+  "id": "A-0103",
+  "test_id": "T-0042",
+  "thread_id": "01K6BQ2X5Y6Z7A8B9C0D1E2F3G",
+  "student_id": "S-0007",
+  "student_name_read": "Học Sinh A",
+  "class_read": "8X1",
+  "source_run_id": "01K6BQ3Z9W4M7T2R8N5P0XJHVA",
+  "superseded_by": null,
+  "status": "graded",
+  "version": 2,
+  "score_earned": 7.5,
+  "score_possible": 9.0,
+  "created_at": "2026-09-28T09:21:40+07:00",
+  "taken_on": "2026-09-26"
+}

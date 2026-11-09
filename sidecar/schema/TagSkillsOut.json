@@ -1,0 +1,60 @@
+{
+  "$defs": {
+    "QuestionTags": {
+      "additionalProperties": false,
+      "properties": {
+        "question_id": {
+          "title": "Question Id",
+          "type": "string"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Tags",
+          "type": "array"
+        },
+        "level": {
+          "anyOf": [
+            {
+              "enum": [
+                "A1",
+                "A2",
+                "B1",
+                "B2"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Level"
+        }
+      },
+      "required": [
+        "question_id",
+        "tags",
+        "level"
+      ],
+      "title": "QuestionTags",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "items": {
+      "items": {
+        "$ref": "#/$defs/QuestionTags"
+      },
+      "title": "Items",
+      "type": "array"
+    }
+  },
+  "required": [
+    "items"
+  ],
+  "title": "TagSkillsOut",
+  "type": "object"
+}

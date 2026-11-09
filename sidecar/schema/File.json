@@ -1,0 +1,89 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "path": {
+      "title": "Path",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "upload",
+        "derived",
+        "text",
+        "export"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "derived_from": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Derived From"
+    },
+    "mime": {
+      "title": "Mime",
+      "type": "string"
+    },
+    "width": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Width"
+    },
+    "height": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Height"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "original_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Original Name"
+    }
+  },
+  "required": [
+    "id",
+    "path",
+    "kind",
+    "derived_from",
+    "mime",
+    "width",
+    "height",
+    "created_at"
+  ],
+  "title": "File",
+  "type": "object"
+}

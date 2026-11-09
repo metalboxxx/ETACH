@@ -1,0 +1,135 @@
+@import "tailwindcss";
+@import "./styles/fonts.css";
+@import "./styles/tokens.css";
+
+/* Tokens as Tailwind utilities: bg-bg, bg-surface, text-text, text-muted, border-border, ... */
+@theme inline {
+  --color-bg: var(--etach-bg);
+  --color-surface: var(--etach-surface);
+  --color-sidebar: var(--etach-sidebar);
+  --color-panel: var(--etach-panel);
+  --color-text: var(--etach-text);
+  --color-muted: var(--etach-text-muted);
+  --color-border: var(--etach-border);
+  --color-input: var(--etach-input-border);
+  --color-hover: var(--etach-hover);
+  --color-tint: var(--etach-tint);
+  --color-tint-strong: var(--etach-tint-strong);
+  --color-accent: var(--etach-accent);
+  --color-accent-hover: var(--etach-accent-hover);
+  --color-accent-text: var(--etach-accent-text);
+  --color-accent-strong: var(--etach-accent-strong);
+  --color-focus: var(--etach-focus);
+  /* Meaning (PRD §10.1 v8.12): correct and unsure are fills (bg-correct, bg-unsure/15) under
+     text-text; wrong is text or a fill under white (`text-on-wrong`). `danger` is the same brick, named for delete
+     buttons and error messages. */
+  --color-correct: var(--etach-correct);
+  --color-unsure: var(--etach-unsure);
+  --color-wrong: var(--etach-wrong);
+  --color-danger: var(--etach-wrong);
+  --color-on-wrong: var(--etach-accent-text);
+  /* One font for the whole app (PRD §10.1 v8.16); both names stay so no class changes. */
+  --font-sans: "Faustina", "Times New Roman", serif;
+  --font-serif: "Faustina", "Times New Roman", serif;
+  /* Every text in Faustina (the teacher): `font-mono` (Format help examples, picture placeholders)
+     and the preflight's code/pre faces too, instead of the system monospace. */
+  --font-mono: "Faustina", "Times New Roman", serif;
+  /* The ETACH wordmark only (PRD §10.1 v8.18). */
+  --font-wordmark: "Federo", "Faustina", serif;
+  /* Corners (PRD §10.1 v8.21): papers (cards, panels, inputs, menus, dialogs, rows) 2 px, buttons
+     6 px (`rounded-t-button` for the arch-topped workspace tabs), chips and badges `rounded-full`.
+     Tailwind's own scale is cleared so no other radius can creep back. */
+  --radius-*: initial;
+  --radius-paper: 2px;
+  --radius-button: 6px;
+  --shadow-page: var(--etach-page-shadow);
+  --shadow-tab: var(--etach-tab-shadow);
+}
+
+/* The correct and unsure labels written as text (✓ marks, "AI unsure …"): letters fading from
+   the text colour (top) to deep gold (bottom), the teacher's choice (v8.13). Every point of the
+   fade is >= 3:1 on the surfaces and tints it sits on; a word or a mark always goes with it, so
+   colour alone never carries the meaning. Each wrapped
+   line gets its own fade. On paper and in Windows high contrast the letters are plain text. */
+@utility mark-label {
+  background-image: linear-gradient(to bottom, var(--etach-label-top), var(--etach-label-bottom));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  @media print {
+    background-image: none;
+    color: inherit;
+  }
+  @media (forced-colors: active) {
+    background-image: none;
+    color: CanvasText;
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--etach-bg);
+  color: var(--etach-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The ETACH wordmark (PRD §10.1 v8.18, v8.19): one horizontal gradient across the five letters, its
+   stops placed on the measured ink boxes of "ETACH" in Federo (% of the word width: E 2.5–17.0,
+   T 19.3–34.1, A 34.3–55.4, C 54.7–76.7, H 79.5–97.2). Lime at the left of the E, fading across
+   the E to 20% lime at the T's centre and pure blue at the T's right edge; blue A; blue to deep
+   navy across the middle half of the C (60.2–71.2%); deep navy H. The teacher's pick ("App blue,
+   20%", with deep navy instead of black at the end). The word itself is the accessible name. */
+@utility wordmark-gradient {
+  background-image: linear-gradient(
+    to right,
+    var(--etach-wordmark-lime) 2.5%,
+    color-mix(in srgb, var(--etach-wordmark-lime) 20%, var(--etach-wordmark-blue)) 26.7%,
+    var(--etach-wordmark-blue) 34.1%,
+    var(--etach-wordmark-blue) 60.2%,
+    var(--etach-wordmark-end) 71.2%,
+    var(--etach-wordmark-end) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  @media print {
+    background-image: none;
+    color: inherit;
+  }
+  @media (forced-colors: active) {
+    background-image: none;
+    color: CanvasText;
+  }
+}
+
+/* The double rule under the workspace header (PRD §10.1 v8.21): a 2 px line, a 2 px gap and a
+   1 px line at the bottom edge, like the rules under the head of a printed test. */
+@utility double-rule {
+  background-image: linear-gradient(var(--etach-rule), var(--etach-rule)), linear-gradient(var(--etach-rule), var(--etach-rule));
+  background-size:
+    100% 2px,
+    100% 1px;
+  background-position:
+    left 0 bottom 3px,
+    left 0 bottom 0;
+  background-repeat: no-repeat;
+}
+
+/* The main buttons (PRD §10.1 v8.16, v8.17): Faustina has a small x-height (0.50 em), so the
+   teacher found the labels of the workspace tabs and the main action buttons too small.
+   font-size-adjust draws them with Merriweather's x-height (0.56 em, measured) at each control's
+   own size: a 14 px label looks as large as 14 px Merriweather (x-height 7.8 px instead of 7 px).
+   Only those carry `main-label`: the workspace tabs and bar button, Extract again, Grade student
+   answers, Print, Print key and Save as Word. Every other text keeps Faustina's own proportions. */
+@utility main-label {
+  font-size-adjust: 0.56;
+}

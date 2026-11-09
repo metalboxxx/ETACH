@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "occasion": "FinalTerm",
+    "grade": 8,
+    "term": 1,
+    "test_number": null,
+    "variant": null,
+    "school": null,
+    "year": "2025-2026"
+  },
+  "sections": [
+    {
+      "printed_title": "I",
+      "instructions": "Choose the best answer.",
+      "printed_points": "(0.5 pts)",
+      "skill": "grammar",
+      "kind": "questions",
+      "groups": [
+        {
+          "stimulus": null,
+          "pictures": [],
+          "questions": [
+            {
+              "printed_number": 1,
+              "type": "mcq",
+              "stem": "Page 1 question 1: choose the word with a different sound 1",
+              "options": [
+                "opt a",
+                "opt b",
+                "opt c",
+                "opt d"
+              ],
+              "cue": null,
+              "page_no": 1
+            },
+            {
+              "printed_number": 2,
+              "type": "mcq",
+              "stem": "Page 1 question 2: choose the word with a different sound 2",
+              "options": [
+                "opt a",
+                "opt b",
+                "opt c",
+                "opt d"
+              ],
+              "cue": null,
+              "page_no": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "printed_title": "II",
+      "instructions": "Choose the best answer.",
+      "printed_points": "(0.5 pts)",
+      "skill": "grammar",
+      "kind": "questions",
+      "groups": [
+        {
+          "stimulus": null,
+          "pictures": [],
+          "questions": [
+            {
+              "printed_number": 3,
+              "type": "mcq",
+              "stem": "Page 2 question 3: choose the word with a different sound 3",
+              "options": [
+                "opt a",
+                "opt b",
+                "opt c",
+                "opt d"
+              ],
+              "cue": null,
+              "page_no": 2
+            },
+            {
+              "printed_number": 4,
+              "type": "mcq",
+              "stem": "Page 2 question 4: choose the word with a different sound 4",
+              "options": [
+                "opt a",
+                "opt b",
+                "opt c",
+                "opt d"
+              ],
+              "cue": null,
+              "page_no": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "printed_title": "III",
+      "instructions": "Choose the best answer.",
+      "printed_points": "(0.5 pts)",
+      "skill": "grammar",
+      "kind": "questions",
+      "groups": [
+        {
+          "stimulus": null,
+          "pictures": [],
+          "questions": [
+            {
+              "printed_number": 5,
+              "type": "mcq",
+              "stem": "Page 3 question 5: choose the word with a different sound 5",
+              "options": [
+                "opt a",
+                "opt b",
+                "opt c",
+                "opt d"
+              ],
+              "cue": null,
+              "page_no": 3
+            },
+            {
+              "printed_number": 6,
+              "type": "mcq",
+              "stem": "Page 3 question 6: choose the word with a different sound 6",
+              "options": [
+                "opt a",
+                "opt b",
+                "opt c",
+                "opt d"
+              ],
+              "cue": null,
+              "page_no": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "answers": {
+    "1": "A",
+    "2": "A",
+    "3": "A",
+    "4": "A",
+    "5": "A",
+    "6": "A"
+  },
+  "student": {
+    "name": "Học Sinh A",
+    "class": "8X1"
+  },
+  "verified_by": null,
+  "verified_on": null
+}

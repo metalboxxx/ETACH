@@ -1,0 +1,14 @@
+{
+  "task": "ai_key_fast",
+  "match_key": "ai_key_fast:c6c2336c52127ff8da02c138376c531ef4911fa902f24c418b96d28a2ac9220c",
+  "response_text": "{\"keys\": [{\"question_id\": \"q-598a69cb\", \"accepted\": [\"He has lived here for two years.\"], \"reason_vi\": \"Giả lập.\"}, {\"question_id\": \"q-bbe193ce\", \"accepted\": [\"It is too cold for us to swim.\", \"It is too cold to swim.\"], \"reason_vi\": \"Giả lập.\"}]}",
+  "thinking_text": "",
+  "logprobs": null,
+  "status": "complete",
+  "meta": {
+    "model": "qwen3.5:4b",
+    "prompt_hash": "9d39d928d393df522aecb4730cc9104b5a14fef3e2495e397c7ef93c63bd38d0",
+    "recorded_at": "2026-10-11T14:07:02.739619+00:00",
+    "schema": "AiKeyOut"
+  }
+}

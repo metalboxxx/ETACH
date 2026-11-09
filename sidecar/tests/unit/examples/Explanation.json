@@ -1,0 +1,9 @@
+{
+  "test_id": "T-0042",
+  "question_id": "q-8e21",
+  "wrong_answer_norm": "for",
+  "error_type": "gap",
+  "text_vi": "'I was born' là một mốc thời gian, nên dùng 'since', không dùng 'for' (present perfect).",
+  "status": "ai",
+  "llm_call_id": "01K6BQ4B7N8M9P0Q1R2S3T4V5W"
+}

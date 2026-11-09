@@ -1,0 +1,39 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "test_id": {
+      "title": "Test Id",
+      "type": "string"
+    },
+    "attempt_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Attempt Id"
+    },
+    "reason": {
+      "enum": [
+        "button",
+        "key_verified",
+        "merge",
+        "review_fix",
+        "points_fix",
+        "after_extract"
+      ],
+      "title": "Reason",
+      "type": "string"
+    }
+  },
+  "required": [
+    "test_id",
+    "attempt_id",
+    "reason"
+  ],
+  "title": "GradeInput",
+  "type": "object"
+}

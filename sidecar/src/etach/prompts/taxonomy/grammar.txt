@@ -1,0 +1,709 @@
+================================================================================
+ENGLISH GRAMMAR SKILL TAXONOMY — CEFR A1 TO B2
+For use by AI agents: skill identification, lesson building, and student evaluation
+================================================================================
+
+SOURCES:
+- Cambridge YLE Handbook 2024
+- English Profile Grammar Syllabus compiled from EU official data (A1–B2)
+- ExamEnglish CEFR grammar level reference
+- Test-English grammar table of contents
+
+CEFR LEVEL SCALE:
+- Pre-A1 = Beginner (below A1)
+- A1     = Elementary
+- A2     = Pre-Intermediate
+- B1     = Intermediate
+- B2     = Upper-Intermediate
+
+SKILL ID FORMAT: GR-[CONCEPT_CODE]-[LEVEL]
+- CONCEPT_CODE is a 3-letter abbreviation of the grammar concept.
+- LEVEL is the CEFR level at which this version of the skill is introduced.
+- Same concept code across different levels = same concept, expanded scope.
+- Skills are CUMULATIVE: a B1 student is expected to have mastered all A1 and A2 skills.
+
+MASTERY LEVELS (applies to every skill ID):
+- Mastery 1: Can apply the formula mechanically with simple, familiar vocabulary.
+- Mastery 2: Can apply the grammar correctly in real communicative context with appropriate vocabulary and sentence complexity for the CEFR level. This is the PASS threshold.
+- Mastery 3: Can apply the grammar correctly in tricky or misleading situations designed to confuse (e.g. near-identical forms, common error traps, mixed tenses).
+
+A student must reach Mastery Level 2 on a skill to be considered as having "passed" that skill.
+
+================================================================================
+SECTION 1: PRESENT SIMPLE (PSV)
+================================================================================
+
+GR-PSV-A1 | Present Simple — Affirmative Forms | A1
+Introduced at: A1
+What is tested:
+- Affirmative statements only: "I eat", "She eats", "They play".
+- Third-person singular -s ending (eats, reads, goes).
+- Basic adverbs of frequency in mid position: always, usually, sometimes, never.
+- "To be" as a linking verb in present simple: "He is happy", "They are friends".
+NOTE: Negative and question forms are NOT yet expected at this level.
+Example sentences:
+  "Nick is happy."
+  "She always eats lunch at school."
+  "My cat sleeps a lot."
+
+GR-PSV-A2 | Present Simple — Negatives, Questions and Full System | A2
+Introduced at: A2
+What is tested:
+- Negative forms: don't / doesn't + base verb. "I don't like eggs." "She doesn't play tennis."
+- Question forms: Do you...? Does she...? "Does he walk to school?"
+- Short answers: Yes, I do. / No, she doesn't.
+- Indirect/embedded questions: "I want to know what time the shop opens."
+- Third-person question forms fully mastered.
+- Mental process verbs (know, think, believe, want) in present simple.
+- Present simple in conditional if-clauses (see GR-CND-A2).
+NOTE: This is the completion of the present simple system.
+
+================================================================================
+SECTION 2: PRESENT CONTINUOUS (PCV)
+================================================================================
+
+GR-PCV-A1 | Present Continuous — Affirmative Forms | A1
+Introduced at: A1
+What is tested:
+- Affirmative form only: subject + am/is/are + verb-ing. "The cat is sleeping." "What are you doing?"
+- Actions happening right now.
+- Basic -ing spelling rules (running, sitting, playing).
+NOTE: Negative and question forms introduced at A2. Future reference NOT expected.
+Example: "What are you doing? The cat's sleeping."
+
+GR-PCV-A2 | Present Continuous — Negatives, Questions and Future Use | A2
+Introduced at: A2
+What is tested:
+- Negative forms: am/is/are + not + verb-ing. "She isn't watching TV."
+- Question forms: Am/Is/Are + subject + verb-ing? "Are they coming?"
+- Short answers: Yes, she is. / No, they aren't.
+- Present continuous for FUTURE ARRANGEMENTS: "I'm meeting my friend tomorrow."
+- Temporary situations (contrast with present simple habits).
+NOTE: The shift to future meaning is a key expansion at A2.
+
+================================================================================
+SECTION 3: TO BE (TBE)
+================================================================================
+
+GR-TBE-A1 | To Be — Full Present Paradigm | A1
+Introduced at: A1
+What is tested:
+- Full affirmative paradigm: I am, you are, he/she/it is, we/they are.
+- Contractions: I'm, you're, he's, she's, it's, we're, they're.
+- Negatives: I'm not, she isn't, they aren't.
+- Yes/No questions: "Is that your sister?" + short answers: "Yes, it is." / "No, it isn't."
+- Wh- questions with "to be": "Who is that man?" "Where is Alex?"
+Example: "Nick is happy." "Is that your sister? Yes, it is."
+
+GR-TBE-A2 | To Be — Past Forms | A2
+Introduced at: A2
+What is tested:
+- Was / Were in affirmative, negative, and question forms.
+- "Was he at school yesterday?" "They weren't happy."
+- Short answers: "Yes, she was." / "No, they weren't."
+NOTE: Listed separately because past "to be" unlocks past simple and past continuous.
+
+================================================================================
+SECTION 4: PAST SIMPLE (PST)
+================================================================================
+
+GR-PST-A1 | Past Simple — Affirmative Forms | A1
+Introduced at: A1
+What is tested:
+- Affirmative only with the most common irregular verbs: went, had, said, got, saw, ate, came, made, took, gave, wore, bought, brought, thought.
+- Regular verbs in affirmative: walked, played, watched, cooked.
+- Time markers: yesterday, last week, last Monday, on Saturday.
+Example: "We went to the park yesterday." "Her father cooked lunch on Friday."
+NOTE: Negative and question forms are NOT yet required at A1.
+
+GR-PST-A2 | Past Simple — Negatives, Questions and Extended Irregulars | A2
+Introduced at: A2
+What is tested:
+- Negative forms: didn't + base verb. "We didn't see the pirate."
+- Question forms: Did + subject + base verb? "Did you go to the cinema?"
+- Short answers: "Yes, I did." / "No, she didn't."
+- Extended set of irregular verbs (beyond A1 core set).
+- Wh- questions in past: "Where did you go?" "What did she say?"
+Example: "Did you go to the cinema? Yes, I did. We didn't see the pirate."
+
+================================================================================
+SECTION 5: PAST CONTINUOUS (PCT)
+================================================================================
+
+GR-PCT-A2 | Past Continuous | A2
+Introduced at: A2
+What is tested:
+- Form: was/were + verb-ing. Affirmative, negative, question.
+- Ongoing background action interrupted by a past simple event: "I was cooking when he arrived."
+- Setting the scene in a story: "It was raining. The children were playing inside."
+- Question form: "What were you doing at 5pm?"
+NOTE: Full narrative contrast with past simple is further developed at B1(see GR-NAR-B1).
+
+================================================================================
+SECTION 6: PRESENT PERFECT (PPF)
+================================================================================
+
+GR-PPF-A2 | Present Perfect — Experience and Recent Events | A2
+Introduced at: A2
+What is tested:
+- Form: have/has + past participle.
+- Basic uses: recent events ("She has just left."), and experience ("I have seen that film.").
+- Key adverbs: just, already, yet (basic), ever, never.
+- Negative: "He hasn't finished." Question: "Have you ever been to London?"
+NOTE: Contrast with past simple (since / for) is NOT yet required. That distinction is B1.
+
+GR-PPF-B1 | Present Perfect — Contrast with Past Simple and Continuous Form | B1
+Introduced at: B1
+What is tested:
+- Contrast of present perfect vs. past simple: "I have lived here for ten years." vs. "I lived there in 2010."
+- Time expressions: since (a point in time), for (a duration).
+- Present perfect continuous: have/has + been + verb-ing. "She has been waiting for an hour."
+- Use for actions that started in the past and continue now.
+
+================================================================================
+SECTION 7: PAST PERFECT (PPT)
+================================================================================
+
+GR-PPT-B1 | Past Perfect Simple | B1
+Introduced at: B1
+What is tested:
+- Form: had + past participle.
+- Sequence of two past events: "She had already left when I arrived."
+- In reported speech backshift: "He said he had seen it."
+- With by the time: "By the time we arrived, the film had started."
+
+GR-PPT-B2 | Past Perfect Continuous | B2
+Introduced at: B2
+What is tested:
+- Form: had been + verb-ing.
+- Duration of an action before another past event: "She had been working for three hours before she took a break."
+- Explaining the cause of a past state: "He was tired because he had been running."
+
+================================================================================
+SECTION 8: FUTURE FORMS (FUT)
+================================================================================
+
+GR-FUT-A1 | Future — Will and Going To (Basic Introduction) | A1
+Introduced at: A1
+What is tested:
+- Will / shall: simple affirmative statements. "I will help you." "It will be fun."
+- Going to: plans and intentions. "I'm going to eat pizza tonight."
+- Both introduced at surface level — no contrast between them required at A1.
+Note: "going to" for plans and intentions, "will"/"shall" for future.
+
+GR-FUT-A2 | Future — Will vs Going To Contrast | A2
+Introduced at: A2
+What is tested:
+- Will for spontaneous decisions and offers: "I'll help you carry that."
+- Going to for prior plans and predictions based on evidence: "Look at those clouds — it's going to rain."
+- Present continuous for confirmed future arrangements: "I'm meeting her at 5pm." (see also GR-PCV-A2)
+- Will negative: "She won't come." Will questions: "Will you be there?"
+
+GR-FUT-B1 | Future — Continuous Form and Evidence-Based Predictions | B1
+Introduced at: B1
+What is tested:
+- Future continuous: will be + verb-ing. "I'll be waiting at the gate." "This time tomorrow, she'll be flying."
+- Will and going to for predictions, both with and without evidence.
+- "Shall" for suggestions and offers in questions: "Shall we go?"
+
+GR-FUT-B2 | Future — Perfect Forms and Advanced Expressions | B2
+Introduced at: B2
+What is tested:
+- Future perfect: will have + past participle. "By Friday, I will have finished the report."
+- Future perfect continuous: will have been + verb-ing. "By next year, she'll have been teaching for a decade."
+- Other future expressions: be about to, be due to, be on the verge of. "The train is about to leave."
+
+================================================================================
+SECTION 9: CONDITIONALS (CND)
+================================================================================
+
+GR-CND-A2 | Conditionals — Zero and First (Real Conditions) | A2
+Introduced at: A2
+What is tested:
+- Zero conditional: If + present simple, present simple. General truths. "If you heat water to 100°C, it boils."
+- First conditional: If + present simple, will + base verb. Real/likely future. "If it rains, I'll stay home."
+- "Unless" as an alternative to "if not": "Unless you hurry, you'll miss the bus."
+Note: zero and first conditional confirmed.
+
+GR-CND-B1 | Conditionals — Second and Third (Imagined and Past Regret) | B1
+Introduced at: B1
+What is tested:
+- Second conditional: If + past simple, would + base verb. Imagined/unlikely situations. "If I had money, I would travel more."
+- "If I were you, I would..." (fixed advisory form).
+- Third conditional: If + past perfect, would have + past participle. Past regret/impossibility. "If I had studied harder, I would have passed."
+- "Could" and "might" as alternatives to "would" in the result clause.
+
+GR-CND-B2 | Conditionals — Mixed Forms and Wish Structures | B2
+Introduced at: B2
+What is tested:
+- Mixed conditionals: If + past perfect, would + base verb (past cause, present result). "If I had studied medicine, I would be a doctor now."
+- Wish / If only for regret: "I wish I had more time." (present wish) "I wish I had studied harder." (past regret)
+- Wish + would for expressing irritation or desire for change: "I wish he would stop talking."
+
+================================================================================
+SECTION 10: MODAL VERBS (MOD)
+================================================================================
+
+GR-MOD-A1 | Modals — Can and Could (Ability, Permission, Polite Requests) | A1
+Introduced at: A1
+What is tested:
+- Can for ability: "The baby can wave." "I can swim."
+- Can't for lack of ability: "Penguins can't fly."
+- Can for requests/permission: "Can I have some birthday cake?"
+- Could for past ability: "When I was young, I could run very fast."
+- Could for polite requests: "Could you help me, please?"
+- Imperative forms as instructions: "Eat your lunch!" "Don't run!"
+
+GR-MOD-A2 | Modals — Obligation, Advice, Permission and Surface Possibility | A2
+Introduced at: A2
+What is tested:
+- Must / mustn't: strong obligation and prohibition. "He must do his homework." "You mustn't give the rabbit cheese."
+- Have to / don't have to / had to: obligation and absence of obligation. "I've got to go." "He had to draw a whale."
+- Should / shouldn't: advice. "You should see a doctor." "You shouldn't eat so much sugar."
+- May for permission (formal): "May I open the window?" = polite request.
+- Shall for offers and suggestions: "Shall I help you?" "Shall we go?"
+- Would for preferences and polite requests: "I'd like a coffee." "Would you like to come?"
+- Might for surface/recognition-level possibility: "It might rain." "She might come to the party."
+  Students at A2 only need to recognise that might = something could possibly happen.
+  No distinction from "may" required. No past forms. No deduction use.
+NOTE: Full modal possibility/probability distinction (may vs. might) and deduction use (must/can't) are B1 requirements — see GR-MOD-B1.
+Examples: "He must do his homework." "You mustn't give the rabbit cheese." "I've got to go." "He had to draw a whale."
+Note: "might" used to show something will or will not happen.
+
+GR-MOD-B1 | Modals — Possibility, Deduction and Past Modal Forms | B1
+Introduced at: B1
+What is tested:
+- May vs. might: may (stronger possibility), might (weaker/more uncertain possibility). "She may be at home." "He might know the answer."
+- Must for logical deduction (certainty): "He must be tired — he worked all day."
+- Can't for logical impossibility: "That can't be right."
+- Should have / might have / could have: past modal speculation and criticism.
+  "You should have told me." "She might have missed the train." "He could have called."
+- Will probably: "She'll probably be late."
+- Modals + continuous: "She must be sleeping."
+
+GR-MOD-B2 | Modals — Past Deduction, Speculation and Habitual Past | B2
+Introduced at: B2
+What is tested:
+- Can't have + past participle: past logical impossibility. "He can't have done it — he was with me."
+- Must have + past participle: past logical certainty. "She must have left already."
+- Might have / could have: past possibility. "They might have taken a wrong turn."
+- Needn't have + past participle: something done unnecessarily. "You needn't have cooked so much."
+- Would for past habits and routines (different from "used to"): "Every summer, we would go to the coast."
+
+================================================================================
+SECTION 11: PASSIVE VOICE (PAS)
+================================================================================
+
+GR-PAS-B1 | Passive Voice — Present and Past Simple Forms | B1
+Introduced at: B1
+What is tested:
+- Present simple passive: am/is/are + past participle. "English is spoken in many countries." "The letter is written."
+- Past simple passive: was/were + past participle. "The book was published in 1990."
+- By-agent (optional): "The cake was made by my mother."
+- Question forms: "Is it sold here?" "Was the window broken?"
+- Negative: "The report wasn't finished."
+
+GR-PAS-B2 | Passive Voice — Complex Tenses and Reporting Structures | B2
+Introduced at: B2
+What is tested:
+- Passive across other tenses: present continuous passive ("It is being repaired."), present perfect passive ("It has been done."), future passive ("It will be delivered tomorrow.").
+- Passive of reporting verbs: "It is said that..." / "He is believed to be..." / "Scientists are thought to have discovered..."
+- Get-passive (informal): "She got fired." "He got hurt."
+- Passive with two objects: "She was given an award." / "The prize was awarded to her."
+
+================================================================================
+SECTION 12: REPORTED SPEECH (RPT)
+================================================================================
+
+GR-RPT-B1 | Reported Speech — Statements with Tense Backshift | B1
+Introduced at: B1
+What is tested:
+- Reporting statements with tense backshift: "She said she was tired." "He told me he had finished."
+- Basic reporting verbs: said, told.
+- Pronoun and time reference shifts: "now" → "then", "today" → "that day", "I" → "he/she".
+- Reporting questions (indirect): "She asked me where I lived." "He wanted to know if I was ready."
+NOTE: A2 introduces "say" and "tell" as vocabulary, but backshifted reported speech structure is B1.
+
+GR-RPT-B2 | Reported Speech — Commands, Questions and Extended Reporting Verbs | B2
+Introduced at: B2
+What is tested:
+- Reported commands and requests: "She told me to sit down." "He asked me not to be late."
+- Reporting verbs with various patterns: suggested (+ -ing), refused (+ to-inf), admitted (+ -ing), warned (+ not to), denied (+ -ing), advised (+ to-inf), promised (+ to-inf), offered (+ to-inf).
+- "She suggested going to the cinema." "He admitted taking the money."
+
+================================================================================
+SECTION 13: RELATIVE CLAUSES (REL)
+================================================================================
+
+GR-REL-A2 | Relative Clauses — Defining Clauses (who, which, that, where) | A2
+Introduced at: A2
+What is tested:
+- Defining relative clauses with who (people), which (things), that (people or things), where (places).
+- "The man who lives next door is a teacher."
+- "This is the book that I told you about."
+- "That's the shop where I bought my shoes."
+- No commas. The clause is essential to identify the noun.
+NOTE: Confirmed in English Profile A2 grammar as "defining relative clause, subject, with 'who' and 'which'".
+Example: "Taji is the boy who sits next to Zac."
+
+GR-REL-B1 | Relative Clauses — Non-Defining Clauses | B1
+Introduced at: B1
+What is tested:
+- Non-defining relative clauses (with commas): "My brother, who lives in Paris, is an architect."
+- The clause adds extra, non-essential information.
+- Who, which, where — the pronoun cannot be omitted.
+- "The Eiffel Tower, which is in Paris, attracts millions of visitors."
+
+GR-REL-B2 | Relative Clauses — Whose, Whom and Reduced Forms | B2
+Introduced at: B2
+What is tested:
+- Whose: "The author whose book I read is coming to the school."
+- Whom (formal): "The man whom I met was very kind."
+- Reduced relative clauses (participle phrases replacing relative clause): "The woman sitting by the window is my aunt." (= who is sitting)
+- Relative clauses with prepositions: "The person to whom I spoke was very helpful."
+
+================================================================================
+SECTION 14: ARTICLES (ART)
+================================================================================
+
+GR-ART-A1 | Articles — Basic Use of A, An, The and Zero Article | A1
+Introduced at: Pre-A1
+What is tested:
+- a/an with singular countable nouns: "It's a banana." "This is an apple."
+- the for specific reference: "Put the hat on the boy's head."
+- No article (zero article) with proper nouns: names, countries.
+- a/an to describe jobs: "She's a doctor."
+- a/an vs. some (basic): "I want some milk."
+
+GR-ART-A2 | Articles — Extended Use with Superlatives, Unique Reference and General Meaning | A2
+Introduced at: A2
+What is tested:
+- The with superlatives: "She is the best student."
+- The with unique reference: "the sun", "the moon", "the internet".
+- Zero article for general/uncountable meaning: "I like music." "Water is important." (vs. "I like the music in this film.")
+- A/an with adjective + noun: "It was a beautiful day."
+- Complex noun phrases: determiner + uncountable noun, possessive + noun.
+
+================================================================================
+SECTION 15: NOUNS AND PRONOUNS (NPN)
+================================================================================
+
+GR-NPN-A1 | Nouns and Pronouns — Core Set (Personal, Possessive, Demonstrative) | A1
+Introduced at: Pre-A1
+What is tested:
+- Singular and plural nouns including irregular forms: mice, children, people, teeth, feet.
+- Countable and uncountable nouns (basic): water, rice, milk.
+- Personal pronouns (subject): I, you, he, she, it, we, they.
+- Personal pronouns (object): me, you, him, her, it, us, them.
+- Possessive adjectives: my, your, his, her, its, our, their.
+- Possessive pronouns: mine, yours, his, hers, ours, theirs.
+- Possessive 's: "Mike's car", "the dog's name".
+- Demonstrative pronouns: this, that, these, those.
+- "One" as a substitute pronoun: "I'd like one." "Which is the red one?"
+Note: "Pronouns including demonstrative, personal, and possessive interrogative pronouns and 'one'."
+
+GR-NPN-A2 | Nouns and Pronouns — Indefinite, Reflexive and Impersonal Forms | A2
+Introduced at: A2
+What is tested:
+- Indefinite pronouns: something, anything, nothing, someone, anyone, no one, everybody, everything.
+- "There is something on the table." "Did you see anyone?"
+- Impersonal "you": "How do you spell that?" "You should always check your work."
+- "It" as empty/preparatory subject: "It's raining." "It was a good idea to come."
+- Reflexive pronouns: myself, yourself, himself, herself, itself, ourselves, themselves.
+NOTE: English Profile places reflexive pronouns at A2 with "same subject and object" use.
+
+GR-NPN-B1 | Nouns and Pronouns — Question Tags and Substitution with So | B1
+Introduced at: B1
+What is tested:
+- Question tags (full range): "It's cold, isn't it?" "You don't know, do you?" "She can swim, can't she?" "They've finished, haven't they?"
+- Generic/impersonal "one" (formal): "One should always be polite."
+- Substitution with "so": "I think so." "I hope so." / "So do I." "Neither do I."
+
+================================================================================
+SECTION 16: QUANTIFIERS (QNT)
+================================================================================
+
+GR-QNT-A1 | Quantifiers — Basic (Some, Any, How Much, How Many) | A1
+Introduced at: A1
+What is tested:
+- How much / how many (with uncountable and countable nouns).
+- A lot of (basic use).
+- Some / any: "I want some milk." "Have you got any biscuits?"
+- Very + adjective: "It's very cold."
+- A/an, a few, a little (basic introduction).
+
+GR-QNT-A2 | Quantifiers — Much, Many, Too Much, Enough and Most | A2
+Introduced at: A2
+What is tested:
+- Much / many / a lot of: with countable and uncountable nouns in positive, negative, and question forms.
+- A little / a few / little / few (with meaning distinction).
+- Too much / too many: "There is too much sugar." "There are too many people."
+- Enough: "Is there enough food?" "He isn't old enough."
+- Most / most of: "Most children like playing." "Most of my friends live nearby."
+
+GR-QNT-B1 | Quantifiers — All, Both, Either, Neither, None and Other | B1
+Introduced at: B1
+What is tested:
+- All / both / either / neither / none (with correct agreement and use).
+  "All students must attend." "Both answers are correct." "Neither option is good."
+- All of / both of / none of + pronoun: "All of them left." "Neither of us knew."
+- Any / no / none in complex sentences: "There was no food left." "None of them came."
+- Another / other / others / the other / the others: "Give me another chance." "The others stayed."
+
+================================================================================
+SECTION 17: ADJECTIVES AND ADVERBS (ADJ)
+================================================================================
+
+GR-ADJ-A1 | Adjectives and Adverbs — Basic Comparison and Adverbs of Manner | A1
+Introduced at: A1
+What is tested:
+- Adjective position: attributive ("a big dog") and predicative ("The dog is big").
+- Basic comparative: -er than / more ... than. "Your house is bigger than mine."
+- Basic superlative: the -est / the most. "Anna is my best friend."
+- Adverbs of manner (basic): slowly, loudly, quickly. "He sang loudly."
+- Adverbs of frequency: always, usually, sometimes, never — in mid position.
+Examples: "Your house is bigger than mine." "My brother reads more quickly than my sister." "He sang loudly."
+
+GR-ADJ-A2 | Adjectives and Adverbs — Irregular Comparisons and Degree Adverbs | A2
+Introduced at: A2
+What is tested:
+- Irregular comparatives and superlatives: good → better → the best; bad → worse → the worst; far → further → the furthest.
+- Comparative structures: as ... as ("She is as tall as her brother."), not as ... as.
+- Adverbial phrases of time, place, and frequency with correct word order.
+- Degree adverbs with adjectives: quite, fairly, very, really, extremely.
+- Adverbs of stance and certainty: probably, definitely, certainly.
+- "No longer", "any longer", "anymore": "She doesn't live here anymore."
+
+GR-ADJ-B1 | Adjectives and Adverbs — Intensifiers, Compound Adjectives and -ed/-ing Forms | B1
+Introduced at: B1
+What is tested:
+- Intensifiers: too + adjective ("It's too hot."), enough + noun ("There isn't enough time."), so + adjective + that ("It was so cold that we stayed inside.").
+- Compound adjectives with numbers: "a two-hour trip", "a ten-year-old boy".
+- -ed / -ing adjectives: "I'm bored." "It was a boring lesson." (adjectives from verbs: excited/exciting, interested/interesting, surprised/surprising).
+- "Such a / such": "It was such a good film." "She has such patience."
+
+GR-ADJ-B2 | Adjectives and Adverbs — Subtle Distinctions and Participle Modifiers | B2
+Introduced at: B2
+What is tested:
+- Subtle adjective vs. adverb distinctions: "She spoke quietly" vs. "She is quiet." Hard/hardly, late/lately, high/highly, near/nearly.
+- Participle clauses used as adjective modifiers: "The man standing by the door is my uncle." (present participle) / "The letter written in 1945 was found." (past participle).
+- Position of multiple adjectives (opinion → size → age → shape → colour → origin → material): "a beautiful small antique round green French silver box."
+
+================================================================================
+SECTION 18: VERB PATTERNS — GERUNDS AND INFINITIVES (VPT)
+================================================================================
+
+GR-VPT-A1 | Verb Patterns — Like/Love/Hate + -ing and Want/Would Like + Infinitive | A1
+Introduced at: A1
+What is tested:
+- Verb + -ing with: like, love, hate, enjoy. "I like swimming." "She loves reading."
+- Gerund as subject (basic): "Swimming is good for you."
+- Would like + to-infinitive: "I'd like to go home."
+- Want + to-infinitive: "I want to go home."
+Example: "I want to go home." "He started to laugh." (verb + infinitive)
+Note: "ing forms as nouns: Swimming is good."
+
+GR-VPT-A2 | Verb Patterns — Expanded Verb + To-Infinitive and Gerund Patterns | A2
+Introduced at: A2
+What is tested:
+- Verb + to-infinitive: need to, start to, try to, hope to, decide to, plan to, seem to, learn to, manage to.
+- Verb + -ing: enjoy, suggest, finish, avoid, mind, keep, practise.
+- Verb + either (no change in meaning): begin, start, continue, hate, like, love, prefer.
+- Expressing purpose with "to" / "in order to": "She went to the shop to buy a toothbrush."
+- "He wants the teacher to tell a story." (verb + object + to-infinitive, basic).
+
+GR-VPT-B1 | Verb Patterns — Meaning-Changing Gerund vs Infinitive Pairs | B1
+Introduced at: B1
+What is tested:
+- Verbs that CHANGE MEANING depending on to-infinitive vs. -ing:
+  - remember doing (past action) vs. remember to do (not forget).
+  - stop doing (end an action) vs. stop to do (pause in order to do).
+  - forget doing (have no memory of) vs. forget to do (fail to do).
+  - regret doing (feel sorry about past) vs. regret to say (formal present).
+  - try doing (experiment) vs. try to do (attempt).
+- Reporting verbs with specific patterns: admit doing, refuse to do, offer to do, suggest doing, agree to do, promise to do, deny doing, warn (someone) not to do.
+
+GR-VPT-B2 | Verb Patterns — Complex Object Patterns and Perception Verbs | B2
+Introduced at: B2
+What is tested:
+- Verb + object + infinitive: "She made him cry." "I let her go." "He helped me carry the bags."
+- Verb + object + -ing (perception verbs): "I saw him leaving." "She heard them shouting."
+- Complex gerund and infinitive forms: perfect gerunds ("He admitted having stolen it."), passive gerunds ("She hates being ignored.").
+
+================================================================================
+SECTION 19: PREPOSITIONS (PRE)
+================================================================================
+
+GR-PRE-A1 | Prepositions — Place and Time | A1
+Introduced at: Pre-A1
+What is tested:
+- Prepositions of place: in, on, at, next to, behind, in front of, under, between, opposite.
+- Prepositions of time: in (months, years, seasons), on (days, dates), at (clock times, fixed points: at night, at noon).
+
+
+GR-PRE-A2 | Prepositions — Movement and Prepositional Phrases | A2
+Introduced at: A2
+What is tested:
+- Prepositions of movement: to, from, into, out of, through, past, along, across, up, down, around.
+- Common prepositional phrases: by bus, on foot, in a hurry, by mistake, at the end, in the middle of.
+- Preposition + noun as complement: "He's good at maths." "She's afraid of dogs." "I'm interested in art."
+- Stranding (preposition at end): "What are you looking at?" "Who did you speak to?"
+
+================================================================================
+SECTION 20: CONNECTORS AND DISCOURSE MARKERS (CON)
+================================================================================
+
+GR-CON-A1 | Connectors — Basic Clause Joining (And, But, Because, So) | A1
+Introduced at: A1
+What is tested:
+- And, but, or: "I've got a pen and a pencil." "She likes cats but not dogs."
+- Because (basic reason): "I'm happy because it's my birthday."
+- So (basic result): "It was cold so I wore a coat."
+- Then (sequencing): "We ate lunch and then we played."
+Note: "Conjunctions" listed explicitly.
+
+GR-CON-B1 | Connectors — Cause, Contrast, Result and Purpose | B1
+Introduced at: B1
+What is tested:
+- Contrast: although, even though, however, despite, in spite of, while, whereas.
+  "Although it was raining, we went for a walk."
+- Result/reason: therefore, as a result, because of, due to, since, as.
+- Purpose: in order to, so that, so as to.
+- Addition: furthermore, moreover, in addition, as well as.
+- Condition: unless, as long as, provided that.
+
+GR-CON-B2 | Connectors — Nuanced Logical Relations and Hedging Discourse | B2
+Introduced at: B2
+What is tested:
+- Concession: nevertheless, nonetheless, even so, having said that.
+- Contrast (formal): on the other hand, by contrast, conversely.
+- Emphasising: above all, in particular, especially.
+- Summarising/concluding: on balance, all things considered, to sum up.
+- Hedging discourse: it could be argued that, to some extent, broadly speaking.
+
+================================================================================
+SECTION 21: NARRATIVE TENSES (NAR)
+================================================================================
+
+GR-NAR-B1 | Narrative Tenses — Combining Past Simple, Continuous and Perfect | B1
+Introduced at: B1
+What is tested:
+- Using past simple, past continuous, and past perfect together to tell a story.
+- Past simple: completed actions in sequence.
+- Past continuous: background/ongoing actions.
+- Past perfect: action that happened before the main past narrative.
+- Example: "When I arrived (past simple), my friends were waiting (past continuous) because they had already ordered (past perfect)."
+
+GR-NAR-B2 | Narrative Tenses — Extended Control with Would and Used To | B2
+Introduced at: B2
+What is tested:
+- Full control of all narrative tenses in extended writing.
+- "Would" for past habitual actions: "Every morning, he would wake up early and make coffee."
+- "Used to" vs. "would": used to for states and habits; would only for habits (not states).
+- Past perfect continuous for ongoing past action before another past event: "She had been working on the project for months before she finally finished."
+
+================================================================================
+SECTION 22: INVERSION AND ADVANCED STRUCTURES (INV)
+================================================================================
+
+GR-INV-B2 | Inversion — Negative Adverbials | B2
+Introduced at: B2
+What is tested:
+- Inverted word order after negative or restrictive adverbials at the front of a sentence:
+  "Never have I seen such a crowd."
+  "Not only did he arrive late, but he also forgot his homework."
+  "Hardly had she sat down when the phone rang."
+  "Seldom do we get the chance to meet."
+  "No sooner had we left than it started to rain."
+- Used for emphasis and formal/literary register.
+
+GR-CLF-B2 | Cleft Sentences | B2
+Introduced at: B2
+What is tested:
+- It-cleft: "It was John who called." "It was on Tuesday that the accident happened."
+- Wh-cleft: "What I need is a holiday." "What surprised me was his reaction."
+- Used to emphasise a specific element of a sentence.
+
+GR-PTC-B2 | Participle Clauses | B2
+Introduced at: B2
+What is tested:
+- Present participle clause (simultaneous or immediately preceding action): "Walking down the street, she heard a noise." "Hearing a noise, she turned around."
+- Past participle clause (passive meaning): "Written in 1900, the letter was found in the attic."
+- Perfect participle clause (completed action before main verb): "Having finished her work, she went home."
+
+GR-ELP-B2 | Ellipsis and Substitution | B2
+Introduced at: B2
+What is tested:
+- "So do I." / "Neither do I." / "Nor have we."
+- "Do so" as verb substitute: "She asked me to call and I did so."
+- "One / ones": "The red one is nicer than the blue ones."
+- Ellipsis of repeated verb phrases: "She can play guitar and so can her brother."
+
+================================================================================
+END OF GRAMMAR SKILL TAXONOMY
+================================================================================
+
+SUMMARY: TOTAL SKILL IDs
+
+GR-PSV-A1    Present Simple — Affirmative Forms
+GR-PSV-A2    Present Simple — Negatives, Questions and Full System
+GR-PCV-A1    Present Continuous — Affirmative Forms
+GR-PCV-A2    Present Continuous — Negatives, Questions and Future Use
+GR-TBE-A1    To Be — Present Paradigm
+GR-TBE-A2    To Be — Past Forms (was/were)
+GR-PST-A1    Past Simple — Affirmative Forms
+GR-PST-A2    Past Simple — Negatives, Questions and Extended Irregulars
+GR-PCT-A2    Past Continuous
+GR-PPF-A2    Present Perfect — Experience and Recent Events
+GR-PPF-B1    Present Perfect — Contrast with Past Simple and Continuous Form
+GR-PPT-B1    Past Perfect Simple
+GR-PPT-B2    Past Perfect Continuous
+GR-FUT-A1    Future — Will and Going To (Basic Introduction)
+GR-FUT-A2    Future — Will vs Going To Contrast
+GR-FUT-B1    Future — Continuous Form and Evidence-Based Predictions
+GR-FUT-B2    Future — Perfect Forms and Advanced Expressions
+GR-CND-A2    Conditionals — Zero and First (Real Conditions)
+GR-CND-B1    Conditionals — Second and Third (Imagined and Past Regret)
+GR-CND-B2    Conditionals — Mixed Forms and Wish Structures
+GR-MOD-A1    Modals — Can and Could (Ability, Permission, Polite Requests)
+GR-MOD-A2    Modals — Obligation, Advice, Permission and Surface Possibility
+GR-MOD-B1    Modals — Possibility, Deduction and Past Modal Forms
+GR-MOD-B2    Modals — Past Deduction, Speculation and Habitual Past
+GR-PAS-B1    Passive Voice — Present and Past Simple Forms
+GR-PAS-B2    Passive Voice — Complex Tenses and Reporting Structures
+GR-RPT-B1    Reported Speech — Statements with Tense Backshift
+GR-RPT-B2    Reported Speech — Commands, Questions and Extended Reporting Verbs
+GR-REL-A2    Relative Clauses — Defining Clauses (who, which, that, where)
+GR-REL-B1    Relative Clauses — Non-Defining Clauses
+GR-REL-B2    Relative Clauses — Whose, Whom and Reduced Forms
+GR-ART-A1    Articles — Basic Use of A, An, The and Zero Article
+GR-ART-A2    Articles — Extended Use with Superlatives, Unique Reference and General Meaning
+GR-NPN-A1    Nouns and Pronouns — Core Set (Personal, Possessive, Demonstrative)
+GR-NPN-A2    Nouns and Pronouns — Indefinite, Reflexive and Impersonal Forms
+GR-NPN-B1    Nouns and Pronouns — Question Tags and Substitution with So
+GR-QNT-A1    Quantifiers — Basic (Some, Any, How Much, How Many)
+GR-QNT-A2    Quantifiers — Much, Many, Too Much, Enough and Most
+GR-QNT-B1    Quantifiers — All, Both, Either, Neither, None and Other
+GR-ADJ-A1    Adjectives and Adverbs — Basic Comparison and Adverbs of Manner
+GR-ADJ-A2    Adjectives and Adverbs — Irregular Comparisons and Degree Adverbs
+GR-ADJ-B1    Adjectives and Adverbs — Intensifiers, Compound Adjectives and -ed/-ing Forms
+GR-ADJ-B2    Adjectives and Adverbs — Subtle Distinctions and Participle Modifiers
+GR-VPT-A1    Verb Patterns — Like/Love/Hate + -ing and Want/Would Like + Infinitive
+GR-VPT-A2    Verb Patterns — Expanded Verb + To-Infinitive and Gerund Patterns
+GR-VPT-B1    Verb Patterns — Meaning-Changing Gerund vs Infinitive Pairs
+GR-VPT-B2    Verb Patterns — Complex Object Patterns and Perception Verbs
+GR-PRE-A1    Prepositions — Place and Time
+GR-PRE-A2    Prepositions — Movement and Prepositional Phrases
+GR-CON-A1    Connectors — Basic Clause Joining (And, But, Because, So)
+GR-CON-B1    Connectors — Cause, Contrast, Result and Purpose
+GR-CON-B2    Connectors — Nuanced Logical Relations and Hedging Discourse
+GR-NAR-B1    Narrative Tenses — Combining Past Simple, Continuous and Perfect
+GR-NAR-B2    Narrative Tenses — Extended Control with Would and Used To
+GR-INV-B2    Inversion — Negative Adverbials
+GR-CLF-B2    Cleft Sentences
+GR-PTC-B2    Participle Clauses
+GR-ELP-B2    Ellipsis and Substitution
+
+TOTAL: 58 skill IDs across Pre-A1 to B2.
+
+================================================================================

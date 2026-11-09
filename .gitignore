@@ -1,0 +1,30 @@
+# Eval fixtures contain students' names and handwriting (see docs/llm-design.md §8).
+# Only the manifest (hashes + teacher sign-off) is tracked; eval-history.csv is tracked on purpose.
+fixtures/*
+!fixtures/MANIFEST.sha256
+
+# Local models and app data
+*.gguf
+models/
+
+# Build output and dependencies
+node_modules/
+dist/
+target/
+src-tauri/target/
+
+# Local / scratch
+.env
+.claude/
+temp/
+
+sidecar/.venv/
+app/node_modules/
+app/src-tauri/target/
+app/dist/
+.devdata/
+__pycache__/
+
+# Step 21: the frozen sidecar (PyInstaller folder build) and its work folder
+sidecar/build/
+sidecar/dist/

@@ -1,0 +1,136 @@
+{
+  "$defs": {
+    "KeyCheck": {
+      "additionalProperties": false,
+      "description": "What ``verify_key`` said when it did not confirm the key (data-model v1.24, step 22.5.5).\n\n``disagreed``: the checker's own ``answer`` and its ``reasoning``. ``unsure``: the checker\nanswered ``?`` (step 22.6.3, D6), so only its ``reasoning`` is kept. ``did_not_finish``: the\ncheck was cut off or failed twice, so there is no answer (both ``None``).",
+      "properties": {
+        "status": {
+          "enum": [
+            "disagreed",
+            "unsure",
+            "did_not_finish"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "answer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Answer"
+        },
+        "reasoning": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reasoning"
+        }
+      },
+      "required": [
+        "status"
+      ],
+      "title": "KeyCheck",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "test_id": {
+      "title": "Test Id",
+      "type": "string"
+    },
+    "question_id": {
+      "title": "Question Id",
+      "type": "string"
+    },
+    "accepted": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Accepted",
+      "type": "array"
+    },
+    "reason_vi": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Reason Vi"
+    },
+    "source": {
+      "enum": [
+        "from_key_photo",
+        "ai",
+        "teacher_edit"
+      ],
+      "title": "Source",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "ai_unverified",
+        "ai_verified",
+        "ai_uncertain",
+        "teacher_verified",
+        "from_key_photo"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "confidence": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Confidence"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "title": "Updated At",
+      "type": "string"
+    },
+    "checker": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/KeyCheck"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "required": [
+    "test_id",
+    "question_id",
+    "accepted",
+    "reason_vi",
+    "source",
+    "status",
+    "confidence",
+    "updated_at"
+  ],
+  "title": "AnswerKey",
+  "type": "object"
+}

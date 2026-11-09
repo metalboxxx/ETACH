@@ -1,0 +1,42 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "file_id": {
+      "title": "File Id",
+      "type": "string"
+    },
+    "rotation": {
+      "enum": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "title": "Rotation",
+      "type": "integer"
+    },
+    "is_key": {
+      "title": "Is Key",
+      "type": "boolean"
+    },
+    "text_file_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Text File Id"
+    }
+  },
+  "required": [
+    "file_id",
+    "rotation",
+    "is_key",
+    "text_file_id"
+  ],
+  "title": "PageInput",
+  "type": "object"
+}

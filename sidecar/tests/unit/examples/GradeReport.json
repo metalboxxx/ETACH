@@ -1,0 +1,28 @@
+{
+  "attempt_id": "A-0103",
+  "run_id": "01K6BQ7C2F8D3S6V1K9Y4ZQWEB",
+  "weak_points": [
+    {
+      "skill_tag": "G.TENSE.PRESENT_PERFECT",
+      "wrong": 3,
+      "seen": 5,
+      "gap_errors": 2,
+      "note_vi": "Còn nhầm 'since' và 'for' với thì hiện tại hoàn thành.",
+      "label": "inconsistent",
+      "level": "B1",
+      "held_back": false
+    }
+  ],
+  "careless_notes": [
+    "Câu 21: viết 'beautyful' thay vì 'beautiful'."
+  ],
+  "summary_vi": "Em làm tốt phần phát âm và đọc hiểu.\nCần ôn lại thì hiện tại hoàn thành.",
+  "teacher_questions": [
+    {
+      "question_vi": "Em chọn 'for' ở câu 17 vì sao?",
+      "what_answers_mean_vi": "Nếu em nói 'vì có khoảng thời gian' thì em chưa phân biệt mốc và khoảng."
+    }
+  ],
+  "uncertain_points": 0.5,
+  "created_at": "2026-09-28T09:40:05+07:00"
+}

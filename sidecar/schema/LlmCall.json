@@ -1,0 +1,125 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "step_id": {
+      "title": "Step Id",
+      "type": "string"
+    },
+    "role": {
+      "enum": [
+        "vision",
+        "reasoning",
+        "grading_check",
+        "extraction_check",
+        "ocr"
+      ],
+      "title": "Role",
+      "type": "string"
+    },
+    "model": {
+      "title": "Model",
+      "type": "string"
+    },
+    "prompt_hash": {
+      "title": "Prompt Hash",
+      "type": "string"
+    },
+    "request": {
+      "additionalProperties": true,
+      "title": "Request",
+      "type": "object"
+    },
+    "response_text": {
+      "title": "Response Text",
+      "type": "string"
+    },
+    "thinking_text": {
+      "title": "Thinking Text",
+      "type": "string"
+    },
+    "logprobs": {
+      "anyOf": [
+        {
+          "items": {},
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Logprobs"
+    },
+    "status": {
+      "enum": [
+        "streaming",
+        "complete",
+        "invalid",
+        "incomplete",
+        "cancelled",
+        "error"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "tokens_in": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Tokens In"
+    },
+    "tokens_out": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Tokens Out"
+    },
+    "ms": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Ms"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "step_id",
+    "role",
+    "model",
+    "prompt_hash",
+    "request",
+    "response_text",
+    "thinking_text",
+    "logprobs",
+    "status",
+    "tokens_in",
+    "tokens_out",
+    "ms",
+    "created_at"
+  ],
+  "title": "LlmCall",
+  "type": "object"
+}

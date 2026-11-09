@@ -1,0 +1,72 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "node": {
+      "title": "Node",
+      "type": "string"
+    },
+    "item": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Item"
+    },
+    "try_no": {
+      "title": "Try No",
+      "type": "integer"
+    },
+    "status": {
+      "enum": [
+        "running",
+        "done",
+        "incomplete",
+        "failed",
+        "skipped"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "started_at": {
+      "format": "date-time",
+      "title": "Started At",
+      "type": "string"
+    },
+    "finished_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Finished At"
+    }
+  },
+  "required": [
+    "id",
+    "run_id",
+    "node",
+    "item",
+    "try_no",
+    "status",
+    "started_at",
+    "finished_at"
+  ],
+  "title": "Step",
+  "type": "object"
+}

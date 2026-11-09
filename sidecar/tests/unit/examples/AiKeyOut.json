@@ -1,0 +1,18 @@
+{
+  "keys": [
+    {
+      "question_id": "q-7f3a",
+      "accepted": [
+        "B"
+      ],
+      "reason_vi": "'played' đọc /d/, các từ còn lại đọc /ɪd/."
+    },
+    {
+      "question_id": "q-8e21",
+      "accepted": [
+        "since"
+      ],
+      "reason_vi": "Mốc thời gian 'I was born' → 'since'."
+    }
+  ]
+}

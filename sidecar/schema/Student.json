@@ -1,0 +1,71 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "full_name": {
+      "title": "Full Name",
+      "type": "string"
+    },
+    "name_search": {
+      "title": "Name Search",
+      "type": "string"
+    },
+    "class_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Class Name"
+    },
+    "school": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "School"
+    },
+    "grade": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Grade"
+    },
+    "notes": {
+      "default": "",
+      "title": "Notes",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "full_name",
+    "name_search",
+    "class_name",
+    "school",
+    "grade",
+    "created_at"
+  ],
+  "title": "Student",
+  "type": "object"
+}

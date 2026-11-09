@@ -1,0 +1,6 @@
+{
+  "after": "../extract",
+  "target": "attempt",
+  "recorded_test_id": "T-0001",
+  "recorded_attempt_id": "A-0001"
+}

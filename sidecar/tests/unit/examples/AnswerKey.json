@@ -1,0 +1,17 @@
+{
+  "test_id": "T-0042",
+  "question_id": "q-8e21",
+  "accepted": [
+    "since"
+  ],
+  "reason_vi": "Thì hiện tại hoàn thành với mốc thời gian bắt đầu → dùng 'since'.",
+  "source": "ai",
+  "status": "ai_uncertain",
+  "confidence": 0.61,
+  "updated_at": "2026-09-28T09:40:05+07:00",
+  "checker": {
+    "status": "disagreed",
+    "answer": "for",
+    "reasoning": "The gap comes before a length of time, so the answer is 'for'."
+  }
+}

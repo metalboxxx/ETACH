@@ -1,0 +1,33 @@
+{
+  "pages": [
+    {
+      "original_name": "De-seeded (1).jpg",
+      "width": 400,
+      "height": 600,
+      "rotation": 0,
+      "is_key": false,
+      "has_text_layer": false,
+      "stand_in": "page-01.png"
+    },
+    {
+      "original_name": "De-seeded (2).jpg",
+      "width": 400,
+      "height": 600,
+      "rotation": 0,
+      "is_key": false,
+      "has_text_layer": false,
+      "stand_in": "page-02.png"
+    },
+    {
+      "original_name": "De-seeded (3).jpg",
+      "width": 400,
+      "height": 600,
+      "rotation": 0,
+      "is_key": false,
+      "has_text_layer": false,
+      "stand_in": "page-03.png"
+    }
+  ],
+  "existing_test_id": "T-0001",
+  "supersedes_attempt_id": null
+}

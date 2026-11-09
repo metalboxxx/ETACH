@@ -1,0 +1,44 @@
+{
+  "additionalProperties": false,
+  "description": "A section left out of points_possible: listening (not stored) or writing (graded=False).",
+  "properties": {
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "questions": {
+      "items": {
+        "type": "integer"
+      },
+      "title": "Questions",
+      "type": "array"
+    },
+    "points": {
+      "title": "Points",
+      "type": "number"
+    },
+    "kind": {
+      "anyOf": [
+        {
+          "enum": [
+            "listening",
+            "writing"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Kind"
+    }
+  },
+  "required": [
+    "title",
+    "questions",
+    "points"
+  ],
+  "title": "OmittedSection",
+  "type": "object"
+}

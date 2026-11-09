@@ -1,0 +1,52 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "thread_id": {
+      "title": "Thread Id",
+      "type": "string"
+    },
+    "role": {
+      "enum": [
+        "teacher",
+        "app"
+      ],
+      "title": "Role",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "text",
+        "photo_check",
+        "run_card",
+        "grade_card",
+        "notice"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "body": {
+      "additionalProperties": true,
+      "title": "Body",
+      "type": "object"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "thread_id",
+    "role",
+    "kind",
+    "body",
+    "created_at"
+  ],
+  "title": "Message",
+  "type": "object"
+}

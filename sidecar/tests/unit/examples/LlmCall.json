@@ -1,0 +1,28 @@
+{
+  "id": "01K6BQ4B7N8M9P0Q1R2S3T4V5W",
+  "step_id": "01K6BQ4A1B2C3D4E5F6G7H8J9K",
+  "role": "vision",
+  "model": "vision-model",
+  "prompt_hash": "sha256:9c1f0e",
+  "request": {
+    "task": "read_answers_page",
+    "images": [
+      "ab12000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "schema": "ReadAnswersOut"
+  },
+  "response_text": "{\"student_name\": \"Học Sinh A\", \"class_name\": \"8X1\", \"answers\": {}}",
+  "thinking_text": "",
+  "logprobs": [
+    {
+      "token": "{",
+      "logprob": -0.0001,
+      "top_logprobs": []
+    }
+  ],
+  "status": "complete",
+  "tokens_in": 2310,
+  "tokens_out": 412,
+  "ms": 18450,
+  "created_at": "2026-09-28T09:21:40+07:00"
+}

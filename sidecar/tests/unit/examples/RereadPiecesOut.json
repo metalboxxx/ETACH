@@ -1,0 +1,18 @@
+{
+  "pieces": [
+    {
+      "section_title": "II",
+      "printed_number": 14,
+      "answer_form": "choice",
+      "stem": "She ____ to school every day.",
+      "options": [
+        {"label": "A", "text": "go"},
+        {"label": "B", "text": "goes"},
+        {"label": "C", "text": "going"},
+        {"label": "D", "text": "gone"}
+      ],
+      "cue": null,
+      "answer_start": null
+    }
+  ]
+}

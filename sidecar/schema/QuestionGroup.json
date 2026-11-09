@@ -1,0 +1,221 @@
+{
+  "$defs": {
+    "Option": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "text"
+      ],
+      "title": "Option",
+      "type": "object"
+    },
+    "PictureRef": {
+      "additionalProperties": false,
+      "properties": {
+        "file_id": {
+          "title": "File Id",
+          "type": "string"
+        },
+        "page_no": {
+          "title": "Page No",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "file_id",
+        "page_no"
+      ],
+      "title": "PictureRef",
+      "type": "object"
+    },
+    "Question": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "number": {
+          "title": "Number",
+          "type": "integer"
+        },
+        "printed_number": {
+          "title": "Printed Number",
+          "type": "integer"
+        },
+        "page_no": {
+          "title": "Page No",
+          "type": "integer"
+        },
+        "answer_form": {
+          "enum": [
+            "choice",
+            "word",
+            "sentence",
+            "writing"
+          ],
+          "title": "Answer Form",
+          "type": "string"
+        },
+        "context": {
+          "anyOf": [
+            {
+              "enum": [
+                "single",
+                "paragraph"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Context"
+        },
+        "stem": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Stem"
+        },
+        "options": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Option"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Options"
+        },
+        "cue": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Cue"
+        },
+        "answer_start": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Answer Start"
+        },
+        "points": {
+          "title": "Points",
+          "type": "number"
+        },
+        "old_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Old Type"
+        },
+        "old_options": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Option"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Old Options"
+        }
+      },
+      "required": [
+        "id",
+        "number",
+        "printed_number",
+        "page_no",
+        "answer_form",
+        "stem",
+        "options",
+        "cue",
+        "points"
+      ],
+      "title": "Question",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "stimulus": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Stimulus"
+    },
+    "pictures": {
+      "items": {
+        "$ref": "#/$defs/PictureRef"
+      },
+      "title": "Pictures",
+      "type": "array"
+    },
+    "questions": {
+      "items": {
+        "$ref": "#/$defs/Question"
+      },
+      "title": "Questions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "stimulus",
+    "pictures",
+    "questions"
+  ],
+  "title": "QuestionGroup",
+  "type": "object"
+}

@@ -1,0 +1,155 @@
+{
+  "$defs": {
+    "TeacherQuestion": {
+      "additionalProperties": false,
+      "properties": {
+        "question_vi": {
+          "title": "Question Vi",
+          "type": "string"
+        },
+        "what_answers_mean_vi": {
+          "title": "What Answers Mean Vi",
+          "type": "string"
+        }
+      },
+      "required": [
+        "question_vi",
+        "what_answers_mean_vi"
+      ],
+      "title": "TeacherQuestion",
+      "type": "object"
+    },
+    "WeakPoint": {
+      "additionalProperties": false,
+      "properties": {
+        "skill_tag": {
+          "title": "Skill Tag",
+          "type": "string"
+        },
+        "wrong": {
+          "title": "Wrong",
+          "type": "integer"
+        },
+        "seen": {
+          "title": "Seen",
+          "type": "integer"
+        },
+        "gap_errors": {
+          "title": "Gap Errors",
+          "type": "integer"
+        },
+        "note_vi": {
+          "title": "Note Vi",
+          "type": "string"
+        },
+        "label": {
+          "anyOf": [
+            {
+              "enum": [
+                "slipped",
+                "consistently_weak",
+                "inconsistent",
+                "this_paper_only"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Label"
+        },
+        "level": {
+          "anyOf": [
+            {
+              "enum": [
+                "A1",
+                "A2",
+                "B1",
+                "B2"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Level"
+        },
+        "held_back": {
+          "default": false,
+          "title": "Held Back",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "skill_tag",
+        "wrong",
+        "seen",
+        "gap_errors",
+        "note_vi"
+      ],
+      "title": "WeakPoint",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "attempt_id": {
+      "title": "Attempt Id",
+      "type": "string"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "weak_points": {
+      "items": {
+        "$ref": "#/$defs/WeakPoint"
+      },
+      "title": "Weak Points",
+      "type": "array"
+    },
+    "careless_notes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Careless Notes",
+      "type": "array"
+    },
+    "summary_vi": {
+      "title": "Summary Vi",
+      "type": "string"
+    },
+    "teacher_questions": {
+      "items": {
+        "$ref": "#/$defs/TeacherQuestion"
+      },
+      "title": "Teacher Questions",
+      "type": "array"
+    },
+    "uncertain_points": {
+      "title": "Uncertain Points",
+      "type": "number"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "attempt_id",
+    "run_id",
+    "weak_points",
+    "careless_notes",
+    "summary_vi",
+    "teacher_questions",
+    "uncertain_points",
+    "created_at"
+  ],
+  "title": "GradeReport",
+  "type": "object"
+}

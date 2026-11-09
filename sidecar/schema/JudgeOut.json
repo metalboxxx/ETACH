@@ -1,0 +1,23 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "reason": {
+      "title": "Reason",
+      "type": "string"
+    },
+    "verdict": {
+      "enum": [
+        "correct",
+        "incorrect"
+      ],
+      "title": "Verdict",
+      "type": "string"
+    }
+  },
+  "required": [
+    "reason",
+    "verdict"
+  ],
+  "title": "JudgeOut",
+  "type": "object"
+}

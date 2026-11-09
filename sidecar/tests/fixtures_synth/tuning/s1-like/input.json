@@ -1,0 +1,8 @@
+{
+  "pages": [
+    {"file": "page-01.png", "rotation": 0, "is_key": false},
+    {"file": "page-02.png", "rotation": 90, "is_key": false},
+    {"file": "page-03.png", "rotation": 0, "is_key": false}
+  ],
+  "existing_test_id": null
+}

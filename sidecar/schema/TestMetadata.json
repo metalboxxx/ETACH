@@ -1,0 +1,274 @@
+{
+  "$defs": {
+    "OmittedSection": {
+      "additionalProperties": false,
+      "description": "A section left out of points_possible: listening (not stored) or writing (graded=False).",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "questions": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Questions",
+          "type": "array"
+        },
+        "points": {
+          "title": "Points",
+          "type": "number"
+        },
+        "kind": {
+          "anyOf": [
+            {
+              "enum": [
+                "listening",
+                "writing"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Kind"
+        }
+      },
+      "required": [
+        "title",
+        "questions",
+        "points"
+      ],
+      "title": "OmittedSection",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "occasion": {
+      "title": "Occasion",
+      "type": "string"
+    },
+    "grade": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Grade"
+    },
+    "year": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Year"
+    },
+    "school": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "School"
+    },
+    "created_by_ai": {
+      "default": false,
+      "title": "Created By Ai",
+      "type": "boolean"
+    },
+    "term": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Term"
+    },
+    "test_number": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Test Number"
+    },
+    "variant": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Variant"
+    },
+    "test_code": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Test Code"
+    },
+    "region": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Region"
+    },
+    "source": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source"
+    },
+    "textbook": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Textbook"
+    },
+    "units": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Units",
+      "type": "array"
+    },
+    "duration_minutes": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Duration Minutes"
+    },
+    "exam_format": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Exam Format"
+    },
+    "omitted_sections": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/OmittedSection"
+      },
+      "title": "Omitted Sections",
+      "type": "array"
+    },
+    "tags": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Tags",
+      "type": "array"
+    },
+    "parent_test_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Parent Test Id"
+    },
+    "extra": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "integer"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      "default": {},
+      "title": "Extra",
+      "type": "object"
+    },
+    "edited_fields": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Edited Fields",
+      "type": "array"
+    }
+  },
+  "required": [
+    "occasion"
+  ],
+  "title": "TestMetadata",
+  "type": "object"
+}

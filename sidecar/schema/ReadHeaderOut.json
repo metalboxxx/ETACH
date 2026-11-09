@@ -1,0 +1,24 @@
+{
+  "additionalProperties": false,
+  "description": "Page-1 header and the first stems, for the picked-test sanity check (= PageHeader).",
+  "properties": {
+    "header_text": {
+      "title": "Header Text",
+      "type": "string"
+    },
+    "first_stems": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 5,
+      "title": "First Stems",
+      "type": "array"
+    }
+  },
+  "required": [
+    "header_text",
+    "first_stems"
+  ],
+  "title": "ReadHeaderOut",
+  "type": "object"
+}

@@ -1,0 +1,34 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "attempt_id": {
+      "title": "Attempt Id",
+      "type": "string"
+    },
+    "page_no": {
+      "title": "Page No",
+      "type": "integer"
+    },
+    "file_id": {
+      "title": "File Id",
+      "type": "string"
+    },
+    "source_file_id": {
+      "title": "Source File Id",
+      "type": "string"
+    },
+    "rotation": {
+      "title": "Rotation",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "attempt_id",
+    "page_no",
+    "file_id",
+    "source_file_id",
+    "rotation"
+  ],
+  "title": "AttemptPage",
+  "type": "object"
+}

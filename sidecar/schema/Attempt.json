@@ -1,0 +1,127 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "test_id": {
+      "title": "Test Id",
+      "type": "string"
+    },
+    "thread_id": {
+      "title": "Thread Id",
+      "type": "string"
+    },
+    "student_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Student Id"
+    },
+    "student_name_read": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Student Name Read"
+    },
+    "class_read": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Class Read"
+    },
+    "source_run_id": {
+      "title": "Source Run Id",
+      "type": "string"
+    },
+    "superseded_by": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Superseded By"
+    },
+    "status": {
+      "enum": [
+        "extracted",
+        "graded",
+        "reviewed"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "version": {
+      "title": "Version",
+      "type": "integer"
+    },
+    "score_earned": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Score Earned"
+    },
+    "score_possible": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Score Possible"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "taken_on": {
+      "format": "date",
+      "title": "Taken On",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "test_id",
+    "thread_id",
+    "student_id",
+    "student_name_read",
+    "class_read",
+    "source_run_id",
+    "superseded_by",
+    "status",
+    "version",
+    "score_earned",
+    "score_possible",
+    "created_at"
+  ],
+  "title": "Attempt",
+  "type": "object"
+}

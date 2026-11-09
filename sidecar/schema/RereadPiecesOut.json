@@ -1,0 +1,121 @@
+{
+  "$defs": {
+    "Option": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "text"
+      ],
+      "title": "Option",
+      "type": "object"
+    },
+    "RereadPiece": {
+      "additionalProperties": false,
+      "description": "One broken or missing question, read again: its section's printed title and the question.",
+      "properties": {
+        "section_title": {
+          "title": "Section Title",
+          "type": "string"
+        },
+        "printed_number": {
+          "title": "Printed Number",
+          "type": "integer"
+        },
+        "answer_form": {
+          "enum": [
+            "choice",
+            "word",
+            "sentence",
+            "writing"
+          ],
+          "title": "Answer Form",
+          "type": "string"
+        },
+        "stem": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Stem"
+        },
+        "options": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Option"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Options"
+        },
+        "cue": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Cue"
+        },
+        "answer_start": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Answer Start"
+        }
+      },
+      "required": [
+        "section_title",
+        "printed_number",
+        "answer_form",
+        "stem",
+        "options",
+        "cue"
+      ],
+      "title": "RereadPiece",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Only the questions asked for (the targeted re-read); code patches them into the page.",
+  "properties": {
+    "pieces": {
+      "items": {
+        "$ref": "#/$defs/RereadPiece"
+      },
+      "title": "Pieces",
+      "type": "array"
+    }
+  },
+  "required": [
+    "pieces"
+  ],
+  "title": "RereadPiecesOut",
+  "type": "object"
+}

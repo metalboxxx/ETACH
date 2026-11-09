@@ -1,0 +1,32 @@
+{
+  "id": "q-7f3a",
+  "number": 1,
+  "printed_number": 5,
+  "page_no": 1,
+  "answer_form": "choice",
+  "context": "single",
+  "stem": null,
+  "options": [
+    {
+      "label": "A",
+      "text": "want<u>ed</u>"
+    },
+    {
+      "label": "B",
+      "text": "play<u>ed</u>"
+    },
+    {
+      "label": "C",
+      "text": "need<u>ed</u>"
+    },
+    {
+      "label": "D",
+      "text": "visit<u>ed</u>"
+    }
+  ],
+  "cue": null,
+  "points": 0.25,
+  "answer_start": null,
+  "old_type": null,
+  "old_options": null
+}

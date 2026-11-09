@@ -1,0 +1,308 @@
+{
+  "$defs": {
+    "Option": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "text"
+      ],
+      "title": "Option",
+      "type": "object"
+    },
+    "PictureRegion": {
+      "additionalProperties": false,
+      "description": "A picture on this page that is not mostly text; box on a 0-1000 grid of the page.",
+      "properties": {
+        "x0": {
+          "maximum": 1000,
+          "minimum": 0,
+          "title": "X0",
+          "type": "integer"
+        },
+        "y0": {
+          "maximum": 1000,
+          "minimum": 0,
+          "title": "Y0",
+          "type": "integer"
+        },
+        "x1": {
+          "maximum": 1000,
+          "minimum": 0,
+          "title": "X1",
+          "type": "integer"
+        },
+        "y1": {
+          "maximum": 1000,
+          "minimum": 0,
+          "title": "Y1",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "x0",
+        "y0",
+        "x1",
+        "y1"
+      ],
+      "title": "PictureRegion",
+      "type": "object"
+    },
+    "TranscribedGroup": {
+      "additionalProperties": false,
+      "properties": {
+        "stimulus": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Stimulus"
+        },
+        "pictures": {
+          "items": {
+            "$ref": "#/$defs/PictureRegion"
+          },
+          "title": "Pictures",
+          "type": "array"
+        },
+        "questions": {
+          "items": {
+            "$ref": "#/$defs/TranscribedQuestion"
+          },
+          "title": "Questions",
+          "type": "array"
+        },
+        "continued": {
+          "default": false,
+          "title": "Continued",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "stimulus",
+        "pictures",
+        "questions"
+      ],
+      "title": "TranscribedGroup",
+      "type": "object"
+    },
+    "TranscribedQuestion": {
+      "additionalProperties": false,
+      "properties": {
+        "printed_number": {
+          "title": "Printed Number",
+          "type": "integer"
+        },
+        "answer_form": {
+          "enum": [
+            "choice",
+            "word",
+            "sentence",
+            "writing"
+          ],
+          "title": "Answer Form",
+          "type": "string"
+        },
+        "stem": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Stem"
+        },
+        "options": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Option"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Options"
+        },
+        "cue": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Cue"
+        },
+        "answer_start": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Answer Start"
+        },
+        "continued": {
+          "default": false,
+          "title": "Continued",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "printed_number",
+        "answer_form",
+        "stem",
+        "options",
+        "cue"
+      ],
+      "title": "TranscribedQuestion",
+      "type": "object"
+    },
+    "TranscribedSection": {
+      "additionalProperties": false,
+      "properties": {
+        "printed_title": {
+          "title": "Printed Title",
+          "type": "string"
+        },
+        "instructions": {
+          "title": "Instructions",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "questions",
+            "listening",
+            "writing"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "skill": {
+          "enum": [
+            "pronunciation",
+            "stress",
+            "grammar",
+            "vocabulary",
+            "communication",
+            "signs",
+            "reading",
+            "word_form",
+            "rewrite",
+            "writing",
+            "mixed"
+          ],
+          "title": "Skill",
+          "type": "string"
+        },
+        "points_text": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Points Text"
+        },
+        "range_first": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Range First"
+        },
+        "range_last": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Range Last"
+        },
+        "groups": {
+          "items": {
+            "$ref": "#/$defs/TranscribedGroup"
+          },
+          "title": "Groups",
+          "type": "array"
+        },
+        "continued": {
+          "default": false,
+          "title": "Continued",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "printed_title",
+        "instructions",
+        "kind",
+        "skill",
+        "points_text",
+        "range_first",
+        "range_last",
+        "groups"
+      ],
+      "title": "TranscribedSection",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "One page's printed text; no canonical numbers or IDs (code assigns them).",
+  "properties": {
+    "header_text": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Header Text"
+    },
+    "sections": {
+      "items": {
+        "$ref": "#/$defs/TranscribedSection"
+      },
+      "title": "Sections",
+      "type": "array"
+    }
+  },
+  "required": [
+    "header_text",
+    "sections"
+  ],
+  "title": "TranscribeOut",
+  "type": "object"
+}

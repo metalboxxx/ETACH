@@ -1,0 +1,27 @@
+{
+  "id": "grp-3",
+  "stimulus": "My village is **peaceful**. I have lived here (17) ____ I was born.",
+  "pictures": [
+    {
+      "file_id": "ef56222222222222222222222222222222222222222222222222222222222222",
+      "page_no": 2
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-8e21",
+      "number": 13,
+      "printed_number": 17,
+      "page_no": 2,
+      "answer_form": "word",
+      "context": "paragraph",
+      "stem": null,
+      "options": null,
+      "cue": null,
+      "points": 0.25,
+      "answer_start": null,
+      "old_type": null,
+      "old_options": null
+    }
+  ]
+}

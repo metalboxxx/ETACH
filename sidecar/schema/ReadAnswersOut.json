@@ -1,0 +1,174 @@
+{
+  "$defs": {
+    "ChoiceReading": {
+      "additionalProperties": false,
+      "properties": {
+        "question_id": {
+          "title": "Question Id",
+          "type": "string"
+        },
+        "answer_form": {
+          "const": "choice",
+          "title": "Answer Form",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "location": {
+          "enum": [
+            "circled_option",
+            "written_in_blank",
+            "answer_box",
+            "margin",
+            "none"
+          ],
+          "title": "Location",
+          "type": "string"
+        },
+        "alt_question_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Alt Question Id"
+        }
+      },
+      "required": [
+        "question_id",
+        "answer_form",
+        "value",
+        "location",
+        "alt_question_id"
+      ],
+      "title": "ChoiceReading",
+      "type": "object"
+    },
+    "TextReading": {
+      "additionalProperties": false,
+      "properties": {
+        "question_id": {
+          "title": "Question Id",
+          "type": "string"
+        },
+        "answer_form": {
+          "enum": [
+            "word",
+            "sentence"
+          ],
+          "title": "Answer Form",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "location": {
+          "enum": [
+            "circled_option",
+            "written_in_blank",
+            "answer_box",
+            "margin",
+            "none"
+          ],
+          "title": "Location",
+          "type": "string"
+        },
+        "alt_question_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Alt Question Id"
+        }
+      },
+      "required": [
+        "question_id",
+        "answer_form",
+        "value",
+        "location",
+        "alt_question_id"
+      ],
+      "title": "TextReading",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "One page's answer readings. A question may have two readings (inline + answer box).",
+  "properties": {
+    "student_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Student Name"
+    },
+    "class_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Class Name"
+    },
+    "answers": {
+      "items": {
+        "discriminator": {
+          "mapping": {
+            "choice": "#/$defs/ChoiceReading",
+            "sentence": "#/$defs/TextReading",
+            "word": "#/$defs/TextReading"
+          },
+          "propertyName": "answer_form"
+        },
+        "oneOf": [
+          {
+            "$ref": "#/$defs/ChoiceReading"
+          },
+          {
+            "$ref": "#/$defs/TextReading"
+          }
+        ]
+      },
+      "title": "Answers",
+      "type": "array"
+    }
+  },
+  "required": [
+    "student_name",
+    "class_name",
+    "answers"
+  ],
+  "title": "ReadAnswersOut",
+  "type": "object"
+}

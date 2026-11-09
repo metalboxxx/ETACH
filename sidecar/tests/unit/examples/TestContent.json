@@ -1,0 +1,96 @@
+{
+  "sections": [
+    {
+      "id": "sec-1",
+      "number": 1,
+      "printed_title": "II",
+      "title": "Pronunciation",
+      "instructions": "Choose the word whose underlined part is pronounced differently.",
+      "points": 2.5,
+      "points_source": "printed",
+      "skill": "pronunciation",
+      "graded": true,
+      "groups": [
+        {
+          "id": "grp-1",
+          "stimulus": null,
+          "pictures": [],
+          "questions": [
+            {
+              "id": "q-7f3a",
+              "number": 1,
+              "printed_number": 5,
+              "page_no": 1,
+              "answer_form": "choice",
+              "context": "single",
+              "stem": null,
+              "options": [
+                {
+                  "label": "A",
+                  "text": "want<u>ed</u>"
+                },
+                {
+                  "label": "B",
+                  "text": "play<u>ed</u>"
+                },
+                {
+                  "label": "C",
+                  "text": "need<u>ed</u>"
+                },
+                {
+                  "label": "D",
+                  "text": "visit<u>ed</u>"
+                }
+              ],
+              "cue": null,
+              "points": 0.25,
+              "answer_start": null,
+              "old_type": null,
+              "old_options": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "number": 3,
+      "printed_title": "IV",
+      "title": "Reading: gap fill",
+      "instructions": "Read the passage and fill in each blank with ONE suitable word.",
+      "points": 1.5,
+      "points_source": "printed",
+      "skill": "reading",
+      "graded": true,
+      "groups": [
+        {
+          "id": "grp-3",
+          "stimulus": "My village is **peaceful**. I have lived here (17) ____ I was born.",
+          "pictures": [
+            {
+              "file_id": "ef56222222222222222222222222222222222222222222222222222222222222",
+              "page_no": 2
+            }
+          ],
+          "questions": [
+            {
+              "id": "q-8e21",
+              "number": 13,
+              "printed_number": 17,
+              "page_no": 2,
+              "answer_form": "word",
+              "context": "paragraph",
+              "stem": null,
+              "options": null,
+              "cue": null,
+              "points": 0.25,
+              "answer_start": null,
+              "old_type": null,
+              "old_options": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

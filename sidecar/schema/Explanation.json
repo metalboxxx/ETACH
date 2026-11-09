@@ -1,0 +1,62 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "test_id": {
+      "title": "Test Id",
+      "type": "string"
+    },
+    "question_id": {
+      "title": "Question Id",
+      "type": "string"
+    },
+    "wrong_answer_norm": {
+      "title": "Wrong Answer Norm",
+      "type": "string"
+    },
+    "error_type": {
+      "enum": [
+        "gap",
+        "careless",
+        "spelling",
+        "misread_question",
+        "unknown"
+      ],
+      "title": "Error Type",
+      "type": "string"
+    },
+    "text_vi": {
+      "title": "Text Vi",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "ai",
+        "teacher_edited"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "llm_call_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Llm Call Id"
+    }
+  },
+  "required": [
+    "test_id",
+    "question_id",
+    "wrong_answer_norm",
+    "error_type",
+    "text_vi",
+    "status",
+    "llm_call_id"
+  ],
+  "title": "Explanation",
+  "type": "object"
+}

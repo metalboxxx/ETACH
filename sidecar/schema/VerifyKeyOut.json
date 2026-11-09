@@ -1,0 +1,20 @@
+{
+  "additionalProperties": false,
+  "description": "One question solved independently; code compares ``answer`` with the stored key.",
+  "properties": {
+    "reasoning": {
+      "title": "Reasoning",
+      "type": "string"
+    },
+    "answer": {
+      "title": "Answer",
+      "type": "string"
+    }
+  },
+  "required": [
+    "reasoning",
+    "answer"
+  ],
+  "title": "VerifyKeyOut",
+  "type": "object"
+}

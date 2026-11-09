@@ -1,0 +1,14 @@
+{
+  "task": "ai_key_fast",
+  "match_key": "ai_key_fast:1044cb672fc89e9e74d7bcbc511a5dfd99a78d66f0c0ca7842dc79e9ad640d12",
+  "response_text": "{\"keys\": [{\"question_id\": \"q-3b7e8cbb\", \"accepted\": [\"B\"], \"reason_vi\": \"Giả lập.\"}, {\"question_id\": \"q-5dddc11d\", \"accepted\": [\"T\"], \"reason_vi\": \"Giả lập.\"}]}",
+  "thinking_text": "",
+  "logprobs": null,
+  "status": "complete",
+  "meta": {
+    "model": "qwen3.5:4b",
+    "prompt_hash": "c922a97cc915267e7058fed9e3abe0a3ce5c418455ff1dd9a93563ac01fc6931",
+    "recorded_at": "2026-10-11T14:07:03.427110+00:00",
+    "schema": "AiKeyOut"
+  }
+}

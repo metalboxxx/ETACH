@@ -1,0 +1,96 @@
+{
+  "header_text": "ĐỀ KIỂM TRA CUỐI HỌC KỲ I – NĂM HỌC 2025-2026\nMÔN: TIẾNG ANH 8",
+  "sections": [
+    {
+      "printed_title": "I",
+      "instructions": "Listen and choose the correct answer.",
+      "kind": "listening",
+      "skill": "mixed",
+      "points_text": "(1.0 pt)",
+      "range_first": 1,
+      "range_last": 4,
+      "groups": [],
+      "continued": false
+    },
+    {
+      "printed_title": "II",
+      "instructions": "Choose the word whose underlined part is pronounced differently.",
+      "kind": "questions",
+      "skill": "pronunciation",
+      "points_text": "(2.5 pts)",
+      "range_first": null,
+      "range_last": null,
+      "groups": [
+        {
+          "stimulus": null,
+          "pictures": [],
+          "questions": [
+            {
+              "printed_number": 5,
+              "answer_form": "choice",
+              "stem": null,
+              "options": [
+                {
+                  "label": "A",
+                  "text": "want<u>ed</u>"
+                },
+                {
+                  "label": "B",
+                  "text": "play<u>ed</u>"
+                },
+                {
+                  "label": "C",
+                  "text": "need<u>ed</u>"
+                },
+                {
+                  "label": "D",
+                  "text": "visit<u>ed</u>"
+                }
+              ],
+              "cue": null,
+              "answer_start": null,
+              "continued": false
+            }
+          ],
+          "continued": false
+        }
+      ],
+      "continued": false
+    },
+    {
+      "printed_title": "IV",
+      "instructions": "Read the passage and fill in each blank with ONE suitable word.",
+      "kind": "questions",
+      "skill": "reading",
+      "points_text": null,
+      "range_first": null,
+      "range_last": null,
+      "groups": [
+        {
+          "stimulus": "My village is **peaceful**. I have lived here (17) ____ I was born.",
+          "pictures": [
+            {
+              "x0": 610,
+              "y0": 120,
+              "x1": 940,
+              "y1": 360
+            }
+          ],
+          "questions": [
+            {
+              "printed_number": 17,
+              "answer_form": "word",
+              "stem": null,
+              "options": null,
+              "cue": null,
+              "answer_start": null,
+              "continued": false
+            }
+          ],
+          "continued": false
+        }
+      ],
+      "continued": false
+    }
+  ]
+}

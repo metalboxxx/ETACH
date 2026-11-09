@@ -1,0 +1,33 @@
+{
+  "meta": {"occasion": "FinalTerm", "grade": 8, "term": 1, "test_number": null, "variant": null,
+           "school": null, "year": "2025-2026"},
+  "sections": [
+    {"printed_title": "I", "instructions": "Choose the best answer.", "printed_points": "(1.0 pts)",
+     "skill": "grammar", "kind": "questions",
+     "groups": [{"stimulus": null, "pictures": [], "questions": [
+       {"printed_number": 1, "type": "mcq", "stem": "Synthetic question one ____ here.",
+        "options": ["go", "goes", "going", "gone"], "cue": null, "page_no": 1},
+       {"printed_number": 2, "type": "mcq", "stem": "Synthetic question two ____ there.",
+        "options": ["in", "on", "at", "by"], "cue": null, "page_no": 1}]}]},
+    {"printed_title": "II", "instructions": "Give the correct form of the word.",
+     "printed_points": "(0.5 pts)", "skill": "word_form", "kind": "questions",
+     "groups": [{"stimulus": null, "pictures": [], "questions": [
+       {"printed_number": 3, "type": "word_form", "stem": "Money cannot buy ____.",
+        "options": null, "cue": "HAPPY", "page_no": 1}]}]},
+    {"printed_title": "III", "instructions": "Rewrite the sentences.", "printed_points": "(1.0 pts)",
+     "skill": null, "kind": "questions",
+     "groups": [{"stimulus": null, "pictures": [], "questions": [
+       {"printed_number": 4, "type": "rewrite", "stem": "He came here two years ago. -> He has ____",
+        "options": null, "cue": null, "page_no": 1},
+       {"printed_number": 5, "type": "rewrite", "stem": "It is very cold. We cannot swim. -> It is too ____",
+        "options": null, "cue": null, "page_no": 1}]}]}
+  ],
+  "answers": {"1": "A", "2": "B", "3": "happyness", "4": "He has lived here for 2 years.",
+              "5": "It is so cold to swim."},
+  "key": {"1": ["A"], "2": ["C"], "3": ["happiness"], "4": ["He has lived here for two years."],
+          "5": ["It is too cold for us to swim.", "It is too cold to swim."]},
+  "verdicts": {"4": "correct", "5": "incorrect"},
+  "student": {"name": "Học Sinh A", "class": "8X1"},
+  "verified_by": null,
+  "verified_on": null
+}

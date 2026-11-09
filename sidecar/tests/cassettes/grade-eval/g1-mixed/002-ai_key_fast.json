@@ -1,0 +1,14 @@
+{
+  "task": "ai_key_fast",
+  "match_key": "ai_key_fast:2a0be9227ddc638c9a1b6c7c2ac5af6529e4d2a2f555f682fa90e7bc23c6fe97",
+  "response_text": "{\"keys\": [{\"question_id\": \"q-124e6f25\", \"accepted\": [\"happiness\"], \"reason_vi\": \"Giả lập.\"}]}",
+  "thinking_text": "",
+  "logprobs": null,
+  "status": "complete",
+  "meta": {
+    "model": "qwen3.5:4b",
+    "prompt_hash": "8fe9df06e44ba57aec2bc36b7381eaeb849a7a79d3fb35cca260b273956c892c",
+    "recorded_at": "2026-10-11T14:07:02.728768+00:00",
+    "schema": "AiKeyOut"
+  }
+}
